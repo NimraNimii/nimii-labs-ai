@@ -1,0 +1,224 @@
+/* ==========================================
+   PROMPT WRAPPER
+========================================== */
+.prompt-wrapper{
+    position: relative;
+
+    width:100%;
+    max-width:760px;
+
+   min-height:170px;
+    padding: 18px 24px 42px;
+
+    background:#181427;
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+
+    transition:.25s;
+}
+
+.prompt-wrapper:focus-within{
+    border-color:#8b5cf6;
+    box-shadow:0 0 0 3px rgba(139,92,246,.15);
+}
+
+.prompt-wrapper{
+
+transition:
+border-color .25s,
+box-shadow .25s,
+transform .25s;
+
+}
+
+.prompt-wrapper:hover{
+
+transform:translateY(-1px);
+
+}
+
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.prompt-input{
+
+    flex:1;
+
+    width:100%;
+    height:100%;
+
+    resize:none;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    font-family:inherit;
+
+}
+
+.prompt-input::placeholder{
+    color:transparent;
+}
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+
+.prompt-placeholder {
+  position: absolute;
+  top: 18px;
+  left: 28px;
+  right: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.placeholder-title {
+  margin: 0 0 20px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.examples-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b8adc9;
+}
+
+.example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.example-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  color: #aaa0bd;
+  line-height: 1.4;
+}
+
+.example-item span:first-child {
+  color: #b54cff;
+  font-size: 17px;
+}
+
+
+.example-item{
+    display:flex;
+    align-items:center;
+    
+      gap:8px;
+    line-height:1.35;
+
+    margin:0;
+    padding:0;
+
+    font-size:18px;
+
+
+    color:#b8b2cf;
+}
+
+.example-item span:first-child{
+    flex-shrink:0;
+}
+
+.examples-heading{
+    color:#bdb7d8;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+}
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+.prompt-footer{
+    position: static !important;
+
+    display:flex !important;
+    justify-content:space-between;
+    align-items:center;
+
+    width:100%;
+    gap: 24px;
+  margin-bottom: 18px;
+
+    margin-top:18px;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.prompt-tip{
+    position:static !important;
+    transform:none !important;
+    margin:0;
+}
+
+
+.prompt-counter{
+
+    position:static !important;
+    transform:none !important;
+
+color:#B24CFF;
+    font-size:17px;
+
+    font-weight:700;
+
+    align-self:flex-end;
+
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.prompt-input::-webkit-scrollbar{
+    width:8px;
+}
+
+.prompt-input::-webkit-scrollbar-thumb{
+    background:#8b5cf6;
+    border-radius:999px;
+}
+
+.prompt-input::-webkit-scrollbar-track{
+    background:transparent;
+}

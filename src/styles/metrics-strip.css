@@ -1,0 +1,52 @@
+.metrics-grid{
+  margin-top:24px;
+}
+
+.metrics-strip {
+  padding: 70px 8% 100px;
+  border-top: 60px;
+  padding-bottom: 30px;
+   
+}
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-item h2 {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.metric-item p {
+  letter-spacing: 0.3px;
+ color: rgba(255,255,255,.85);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: .75;
+}
+
+
+@media (max-width: 900px) {
+  .metrics-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .metric-item h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-container {
+    grid-template-columns: 1fr;
+  }
+}

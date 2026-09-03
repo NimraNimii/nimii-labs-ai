@@ -1,0 +1,191 @@
+.improve-panel{
+    background:#181228;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:16px;
+}
+
+/* =========================
+   Title
+========================= */
+
+.improve-title{
+    font-size:22px;
+    font-weight:700;
+    margin:0 0 18px;
+    color:#fff;
+}
+
+/* =========================
+   List
+========================= */
+
+.improve-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* =========================
+   Item
+========================= */
+
+.improve-item{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 16px;
+
+    background:#221b37;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    color:inherit;
+}
+
+.improve-item:hover{
+    transform:translateY(-2px);
+    border-color:#8b5cf6;
+    background:#2a2143;
+    box-shadow:0 8px 24px rgba(139,92,246,.15);
+}
+
+/* =========================
+   Left Side
+========================= */
+
+.improve-left{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+/* =========================
+   Icon
+========================= */
+
+.improve-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+
+    background:rgba(139,92,246,.12);
+
+    border-radius:12px;
+
+    flex-shrink:0;
+}
+
+/* =========================
+   Text
+========================= */
+
+.improve-text h4{
+    margin:0 0 4px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#fff;
+}
+
+.improve-text p{
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.45;
+
+    color:#b6aecf;
+}
+
+/* =========================
+   Arrow
+========================= */
+
+.improve-arrow{
+    font-size:22px;
+
+    color:#9f67ff;
+
+    transition:.25s;
+}
+
+.improve-item:hover .improve-arrow{
+    transform:translateX(4px);
+}
+
+/* =========================
+   Button
+========================= */
+
+.improve-button{
+    width:100%;
+
+    margin-top:20px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(90deg,#8b5cf6,#d946ef);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.improve-button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 30px rgba(168,85,247,.35);
+}
+
+
+.improve-title,
+.improve-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.improve-title {
+  justify-content: flex-start;
+}
+
+.improve-icon,
+.improve-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.improve-title svg,
+.improve-icon svg,
+.improve-arrow svg,
+.improve-button svg {
+  flex-shrink: 0;
+}

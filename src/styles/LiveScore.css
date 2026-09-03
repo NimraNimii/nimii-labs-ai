@@ -1,0 +1,204 @@
+/* ===========================
+   VIRAL SCORE CARD
+=========================== */
+
+.dashboard-viral-card{
+
+    width:100%;
+    max-width:390px;
+
+    background:#171324;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:26px;
+
+    padding:28px;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+/* Header */
+
+.dashboard-live-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:26px;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:20px;
+}
+
+.dashboard-live-header span{
+
+    font-size:18px;
+
+    color:#ffffff;
+
+    font-weight:700;
+}
+
+
+.dashboard-live-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    box-shadow:0 0 12px #22c55e;
+}
+
+/* Gauge */
+
+.dashboard-score-ring{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top: 8px;
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-score-ring svg{
+
+    overflow:visible;
+}
+
+.dashboard-score-number{
+
+    position:absolute;
+
+    top:58%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+}
+
+.dashboard-score-number h1{
+
+    margin:0;
+
+    color:white;
+
+    font-size: 66px;
+
+    line-height:1;
+
+    font-weight:800;
+}
+
+.dashboard-score-number span{
+
+    display:block;
+    margin-top:4px;
+
+    color:#a8a4bf;
+
+    font-size: 18px;
+
+    font-weight:600;
+}
+
+/* Status */
+
+.dashboard-viral-status{
+
+    text-align:center;
+
+    color:#22c55e;
+
+    font-size: 18px;
+
+    font-weight:700;
+
+    margin-top: 10px;
+}
+
+/* Divider */
+
+.dashboard-reach-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:26px 0;
+
+    background:rgba(255,255,255,.08);
+}
+
+/* Reach */
+
+.dashboard-reach-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+}
+
+.dashboard-reach-section small{
+
+    color:#a09bb8;
+
+    font-size:18px;
+}
+
+.dashboard-reach-section h2{
+
+    margin:0;
+
+    font-size: 54px;
+
+    color:#9d4dff;
+
+    font-weight:800;
+    line-height:1;
+}
+
+.dashboard-reach-section span{
+
+    color:#8e89a8;
+
+    font-size:18px;
+}
+
+/* Hover */
+
+.dashboard-viral-card:hover{
+
+    border-color:#8b5cf6;
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+    box-shadow:0 20px 50px rgba(139,92,246,.18);
+}

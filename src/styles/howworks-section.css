@@ -1,0 +1,292 @@
+/* ==========================================
+   LANDING PAGE - HOW IT WORKS
+   PREMIUM SAAS STYLE
+========================================== */
+
+.landing-how-section{
+  position: relative;
+  padding: 140px 8%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.landing-how-section::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  width:700px;
+  height:700px;
+
+  transform:translateX(-50%);
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(168,85,247,.12),
+    transparent 70%
+  );
+
+  pointer-events:none;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.landing-how-header{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.landing-how-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+
+  padding:12px 20px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(168,85,247,.25);
+
+  background:
+  rgba(255,255,255,.02);
+
+  backdrop-filter:blur(20px);
+
+  color:#c084fc;
+
+  font-size: 1.5rem;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.landing-how-header h2{
+  margin-top:28px;
+
+  font-size:clamp(3rem,5vw,5.5rem);
+
+  line-height:1.05;
+
+  font-weight:800;
+
+  color:white;
+}
+
+.landing-how-header h2 span{
+  color:#a855f7;
+}
+
+.landing-how-header p{
+  margin:28px auto 0;
+
+  max-width:760px;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:1.12rem;
+
+  line-height:1.9;
+}
+
+/* ==========================================
+   PROCESS FLOW
+========================================== */
+
+.landing-process{
+    display:grid;
+    grid-template-columns:
+      1fr 80px
+      1fr 80px
+      1fr 80px
+      1fr;
+
+    align-items:center;
+
+    max-width:1600px;
+    margin:80px auto 0;
+}
+
+
+.process-line{
+    height:2px;
+    background:linear-gradient(
+      90deg,
+      rgba(168,85,247,.15),
+      rgba(168,85,247,.8),
+      rgba(168,85,247,.15)
+    );
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.process-item{
+    position:relative;
+
+    min-height:280px;
+
+    padding:32px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.015)
+    );
+
+    border:1px solid rgba(168,85,247,.15);
+
+    transition:.35s ease;
+}
+
+.process-item:hover{
+  transform:translateY(-10px);
+
+  border-color:rgba(168,85,247,.45);
+
+  box-shadow:
+  0 25px 70px rgba(168,85,247,.18);
+}
+
+.process-number{
+  font-size:3.5rem;
+  font-weight:900;
+
+  line-height:1;
+
+  margin-bottom:20px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #d8b4fe,
+    #9333ea
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.process-content h3{
+  color:white;
+
+  font-size:1.3rem;
+
+  margin-bottom:14px;
+
+  font-weight:700;
+}
+
+.process-content p{
+  color:rgba(255,255,255,.72);
+
+  line-height:1.85;
+
+  font-size:.98rem;
+}
+
+
+
+
+/* ==========================================
+   PREMIUM HOVER GLOW
+========================================== */
+
+.process-item::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:inherit;
+
+  opacity:0;
+
+  transition:.35s ease;
+
+  background:
+  radial-gradient(
+    circle at top,
+    rgba(168,85,247,.18),
+    transparent 65%
+  );
+}
+
+.process-item:hover::before{
+  opacity:1;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:1200px){
+
+  .landing-process{
+    flex-direction:column;
+  }
+
+  .process-line{
+    width:2px;
+    height:50px;
+  }
+
+  .process-item{
+    width:100%;
+    max-width:600px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+  .landing-how-section{
+    padding:100px 24px;
+  }
+
+  .landing-how-header{
+    margin-bottom:60px;
+  }
+
+  .landing-how-header h2{
+    font-size:clamp(2.3rem,10vw,3.8rem);
+  }
+
+  .landing-how-header p{
+    font-size:1rem;
+  }
+
+  .process-item{
+    padding:28px;
+  }
+
+  .process-number{
+    font-size:3rem;
+  }
+}
+
+@media (max-width:1200px){
+    .landing-process{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px){
+    .landing-process{
+        grid-template-columns:1fr;
+    }
+}

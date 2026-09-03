@@ -1,0 +1,130 @@
+.logo-container {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================
+   Floating Premium Layers
+========================== */
+
+.logo-frame {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  transform: rotate(-28deg);
+  border: 1.7px solid rgba(214, 122, 255, 0.88);
+}
+
+/* top floating glass */
+.frame-top {
+  top: 3px;
+  z-index: 3;
+  background: rgba(180, 90, 255, 0.03);
+
+  box-shadow:
+    0 0 10px rgba(181, 76, 255, 0.18),
+    inset 0 0 4px rgba(255,255,255,0.08);
+}
+
+/* lower floating base */
+.frame-bottom {
+  top: 11px;
+  left: 1px;
+  opacity: 0.82;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.06),
+      rgba(170, 80, 255, 0.10)
+    );
+
+  box-shadow:
+    0 0 10px rgba(170, 80, 255, 0.18);
+}
+
+/* ==========================
+      Premium 3D N
+========================== */
+
+.logo-n {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 5;
+  transform: translateY(-1px);
+}
+
+/* glossy purple */
+.logo-n span {
+  position: absolute;
+  border-radius: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffe6ff 0%,
+      #dfabff 22%,
+      #b45dff 58%,
+      #7b2cff 100%
+    );
+
+  box-shadow:
+    0 0 6px rgba(190, 90, 255, 0.22),
+    inset 0 0 2px rgba(255,255,255,0.18);
+}
+
+/* left pillar */
+.n-left {
+  width: 5px;
+  height: 18px;
+  left: 0;
+  top: 1px;
+}
+
+/* ribbon diagonal */
+.n-ribbon {
+  width: 5px;
+  height: 23px;
+  left: 7px;
+  top: -1px;
+
+  transform: rotate(-52deg);
+  transform-origin: center;
+}
+
+/* right pillar */
+.n-right {
+  width: 5px;
+  height: 18px;
+  right: 0;
+  top: 1px;
+}
+
+/* ==========================
+      Premium Glow
+========================== */
+
+.logo-container::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(189, 88, 255, 0.15),
+      transparent 72%
+    );
+
+  filter: blur(10px);
+  z-index: 0;
+}
