@@ -44,7 +44,7 @@ openrouter
 
 const plannerProvider =
     process.env.PLANNER_PROVIDER ||
-    "gemini";
+    "qwen";
 
 /*
 =========================================================

@@ -9,7 +9,7 @@ export default function HowItWorks() {
       {/* HERO */}
 
       <section className="howitworks-hero">
-
+ const deferredValue = useDeferredValue(value);
         <span className="howitworks-tag">
           🚀 HOW NIMII WORKS
         </span>

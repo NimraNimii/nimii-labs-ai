@@ -1,10 +1,21 @@
 import dotenv from "dotenv";
 import Groq from "groq-sdk";
+import path from "path";
+import { fileURLToPath } from "url";
 
 import { retryAI } from "../ai/helpers/retryAI.js";
 import { cleanResponse } from "../ai/helpers/cleanResponse.js";
 
-dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({
+    path: path.resolve(__dirname, "../.env"),
+});
+
+if (!process.env.GROQ_API_KEY) {
+    throw new Error("GROQ_API_KEY is missing from .env");
+}
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,

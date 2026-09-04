@@ -58,7 +58,7 @@ import {
 
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import Pricing from "./pricing";
+import Pricing from "./Pricing";
 import Footer from "../components/footer";
 import "../styles/landing-hero.css";
 

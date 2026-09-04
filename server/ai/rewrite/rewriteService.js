@@ -2,7 +2,7 @@
 
 import { buildRewritePrompt } from "./rewritePrompt.js";
 
-import { generateOpenRouter } from "../../services/openrouterService.js";
+import { generateQwen } from "../../services/groqService.js";
 
 import { parseJson } from "../helpers/parseJson.js";
 
@@ -203,12 +203,7 @@ export async function rewriteScript({
             // CALL AI
             // ==============================================
 
-const raw = await generateOpenRouter(
-    prompt,
-    "cohere/north-mini-code:free",
-    0.5,
-    rewriteType === "improve_hook" ? 250 : 600
-);
+const raw = await generateQwen(prompt);
 
 
             console.log(
