@@ -8,6 +8,8 @@ import Trending from "../pages/Trending";
 import MyScripts from "../pages/MyScripts";
 import Dashboard from "../pages/Dashboard";
 import HowItWorks from "../components/HowItWorks";
+import Settings from "../pages/Settings";
+
 
 export default function AppRoutes() {
   return (
@@ -20,6 +22,7 @@ export default function AppRoutes() {
       <Route path="/trending" element={<Trending />} />
       <Route path="/my-scripts" element={<MyScripts />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   );
 }

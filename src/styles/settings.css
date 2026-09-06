@@ -1,0 +1,564 @@
+/* ==========================================
+   NIMII LABS SETTINGS
+========================================== */
+
+.settings-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(124, 58, 237, 0.12),
+      transparent 32%
+    ),
+    #090712;
+
+  color: #fff;
+
+  padding: 48px;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.settings-header {
+  margin-bottom: 34px;
+}
+
+.settings-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: #aaa5b9;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+  margin-bottom: 28px;
+
+  transition: 0.25s ease;
+}
+
+.settings-back-btn:hover {
+  color: #c084fc;
+  transform: translateX(-3px);
+}
+
+.settings-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.settings-title-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    145deg,
+    #6d28d9,
+    #a855f7
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.settings-title-row h1 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.settings-title-row p {
+  margin: 8px 0 0;
+
+  color: #9f9aad;
+
+  font-size: 15px;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.settings-card {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  padding: 26px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+}
+
+.settings-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.1),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.settings-card-header {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+
+  color: #a855f7;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.settings-card-header p {
+  margin: 6px 0 0;
+
+  color: #8f8a9e;
+
+  font-size: 13px;
+}
+
+/* ==========================================
+   ACCOUNT INFO
+========================================== */
+
+.settings-info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-info-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: rgba(139, 92, 246, 0.1);
+
+  color: #c084fc;
+}
+
+.settings-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.settings-label {
+  color: #777285;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-value {
+  color: #eeeaf5;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  overflow-wrap: anywhere;
+}
+
+.settings-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-left: auto;
+
+  color: #86efac;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   ACTION ROW
+========================================== */
+
+.settings-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-action-row h2,
+.settings-action-row h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.settings-action-row p {
+  margin: 7px 0 0;
+
+  color: #8f8a9e;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.settings-primary-btn,
+.settings-secondary-btn,
+.settings-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  padding: 11px 17px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.settings-primary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  box-shadow:
+    0 8px 24px rgba(124, 58, 237, 0.25);
+}
+
+.settings-primary-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.35);
+}
+
+.settings-secondary-btn {
+  border: 1px solid rgba(192, 132, 252, 0.22);
+
+  color: #d8b4fe;
+
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.settings-secondary-btn:hover {
+  background: rgba(139, 92, 246, 0.15);
+
+  border-color: rgba(192, 132, 252, 0.4);
+}
+
+.settings-secondary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.settings-logout-btn {
+  gap: 8px;
+
+  border: 1px solid rgba(248, 113, 113, 0.15);
+
+  color: #fca5a5;
+
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.settings-logout-btn:hover {
+  color: #fff;
+
+  background: rgba(239, 68, 68, 0.14);
+
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+/* ==========================================
+   PLAN
+========================================== */
+
+.settings-plan-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-plan-badge {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  color: #d8b4fe;
+
+  background: rgba(139, 92, 246, 0.12);
+
+  border: 1px solid rgba(192, 132, 252, 0.15);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.settings-plan-content h3 {
+  margin: 12px 0 0;
+
+  color: #fff;
+
+  font-size: 17px;
+}
+
+.settings-plan-content p {
+  margin: 7px 0 0;
+
+  max-width: 620px;
+
+  color: #8f8a9e;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-google-badge {
+  padding: 9px 12px;
+
+  border-radius: 11px;
+
+  color: #aaa5b9;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   DANGER
+========================================== */
+
+.settings-danger-card {
+  margin-top: 26px;
+}
+
+.settings-footer {
+  padding: 14px 0 4px;
+
+  text-align: center;
+
+  color: #696477;
+
+  font-size: 12px;
+}
+
+.settings-footer span {
+  color: #90899d;
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.settings-empty {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #c084fc;
+}
+
+.settings-empty h2 {
+  margin: 18px 0 8px;
+
+  color: #fff;
+
+  font-size: 25px;
+}
+
+.settings-empty p {
+  margin: 0 0 22px;
+
+  color: #918b9f;
+
+  font-size: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 92px 18px 30px;
+  }
+
+  .settings-title-row {
+    align-items: flex-start;
+  }
+
+  .settings-title-row h1 {
+    font-size: 30px;
+  }
+
+  .settings-title-row p {
+    font-size: 13px;
+  }
+
+  .settings-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .settings-action-row,
+  .settings-plan-content {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-primary-btn,
+  .settings-secondary-btn,
+  .settings-logout-btn {
+    width: 100%;
+  }
+
+  .settings-status {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .settings-title-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .settings-title-row h1 {
+    font-size: 26px;
+  }
+
+  .settings-info-row {
+    align-items: flex-start;
+  }
+
+  .settings-status {
+    display: none;
+  }
+}

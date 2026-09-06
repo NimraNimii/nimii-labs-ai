@@ -1,12 +1,14 @@
 import React from "react";
 import { LogOut } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 
 export default function SidebarFooter({
   usage = 2,
   limit = 3,
   handleLogout,
 }) {
+  const navigate = useNavigate();
+
   const percentage = Math.min((usage / limit) * 100, 100);
 
   return (
@@ -32,7 +34,10 @@ export default function SidebarFooter({
           />
         </div>
 
-        <button className="sidebar-upgrade-btn">
+        <button
+          className="sidebar-upgrade-btn"
+          onClick={() => navigate("/pricing")}
+        >
           Upgrade →
         </button>
 
@@ -51,10 +56,8 @@ export default function SidebarFooter({
           className="sidebar-logout-btn"
           onClick={handleLogout}
         >
-
- <LogOut size={17} strokeWidth={2} />
-<span>Logout</span>
-
+          <LogOut size={17} strokeWidth={2} />
+          <span>Logout</span>
         </button>
 
       </div>
