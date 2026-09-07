@@ -382,7 +382,7 @@ setAnalysisStep("Preparing rewrite suggestions");
 
 
       const response = await fetch(
-        "http://localhost:5001/api/generate",
+        "https://server-alpha-one-76.vercel.app/api/generate",
         {
           method: "POST",
           headers: {
@@ -573,7 +573,7 @@ const handleImproveScript = async (rewriteType = "improve_hook") => {
     setAnalysisStage("Improving script...");
 
     const response = await fetch(
-      "http://localhost:5001/api/rewrite",
+    "https://server-alpha-one-76.vercel.app/api/rewrite",
       {
         method: "POST",
         headers: {
