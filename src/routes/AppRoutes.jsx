@@ -9,6 +9,8 @@ import MyScripts from "../pages/MyScripts";
 import Dashboard from "../pages/Dashboard";
 import HowItWorks from "../components/HowItWorks";
 import Settings from "../pages/Settings";
+import ResetPassword from "../pages/ResetPassword";
+import ProtectedRoute from "../assets/ProtectedRoute";
 
 
 export default function AppRoutes() {
@@ -20,9 +22,34 @@ export default function AppRoutes() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/trending" element={<Trending />} />
-      <Route path="/my-scripts" element={<MyScripts />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/settings" element={<Settings />} />
+    
+  <Route
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <Dashboard />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/my-scripts"
+  element={
+    <ProtectedRoute>
+      <MyScripts />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/settings"
+  element={
+    <ProtectedRoute>
+      <Settings />
+    </ProtectedRoute>
+  }
+/>
+      <Route path="/reset-password" element={<ResetPassword />} />
     </Routes>
   );
 }
