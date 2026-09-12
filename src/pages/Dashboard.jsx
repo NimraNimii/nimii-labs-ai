@@ -379,15 +379,23 @@ await wait(700);
 setAnalysisStep("Preparing rewrite suggestions");
 
 
+const user = auth.currentUser;
 
+if (!user) {
+  toast.error("User not logged in");
+  return;
+}
+
+const idToken = await user.getIdToken();
 
       const response = await fetch(
         "https://server-alpha-one-76.vercel.app/api/generate",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+        headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${idToken}`,
+},
 
           body: JSON.stringify({
             niche,
@@ -518,19 +526,7 @@ ${result.cta || ""}
    JSON.stringify(savedScripts)
       );
 
-
-
-      // get logged in user
-      const user = auth.currentUser;
-
-      if (!user) {
-        toast.error("User not logged in");
-        return;
-      }
-
       // save to firestore
-
-
 await addDoc(collection(db, "scripts"), {
   userId: user.uid,
   niche,
@@ -572,13 +568,23 @@ const handleImproveScript = async (rewriteType = "improve_hook") => {
     setGenerating(true);
     setAnalysisStage("Improving script...");
 
+const user = auth.currentUser;
+
+if (!user) {
+  toast.error("User not logged in");
+  return;
+}
+
+const idToken = await user.getIdToken();
+
     const response = await fetch(
     "https://server-alpha-one-76.vercel.app/api/rewrite",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+       headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${idToken}`,
+},
 
 body: JSON.stringify({
     script: {

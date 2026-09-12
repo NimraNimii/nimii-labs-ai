@@ -1,5 +1,6 @@
 import express from "express";
 import { generateScript } from "../controllers/generateController.js";
+import { authenticate } from "../utils/authMiddleware.js";
 
 const router = express.Router();
 
@@ -9,6 +10,6 @@ const router = express.Router();
 |--------------------------------------------------------------------------
 */
 
-router.post("/generate", generateScript);
+router.post("/generate", authenticate, generateScript);
 
 export default router;
