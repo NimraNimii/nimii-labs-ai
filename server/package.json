@@ -18,7 +18,8 @@
     "openai": "^4.104.0",
        "string-similarity": "^4.0.4"
   },
-  "overrides": {
-    "qs": "6.16.0"
-  }
+ "overrides": {
+  "qs": "6.16.0",
+  "jose": "5.10.0"
+}
 }
