@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, loadEnv } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+
+  console.log(
+    "Paddle token found by Vite:",
+    Boolean(env.VITE_PADDLE_CLIENT_TOKEN)
+  );
+
+  return {
+    plugins: [react()],
+  };
+});

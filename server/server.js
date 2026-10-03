@@ -12,6 +12,7 @@ import rewriteRoutes from "./routes/rewriteRoutes.js";
 
 import path from "path";
 import { fileURLToPath } from "url";
+import paddleWebhookRoutes from "./routes/paddleWebhookRoutes.js";
 
 
 
@@ -29,6 +30,10 @@ console.log("PORT:", process.env.PORT);
 const app = express();
 
 app.use(cors());
+
+// Paddle webhook MUST receive the raw request body
+app.use("/api/paddle/webhook", paddleWebhookRoutes);
+
 app.use(express.json());
 
 app.use("/api", generateRoutes);

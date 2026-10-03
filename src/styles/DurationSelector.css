@@ -1,0 +1,99 @@
+/* ==========================================
+   DURATION SELECTOR
+========================================== */
+
+.duration-selector {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 200px;
+    height: 56px;
+
+    background: #181427;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition: .25s;
+}
+
+.duration-selector:hover {
+    border-color: #8b5cf6;
+}
+
+.duration-selector:focus-within {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139,92,246,.12);
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.duration-icon {
+    position: absolute;
+    left: 18px;
+
+    color: #ffffff;
+    opacity: .9;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.duration-select {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 48px;
+    padding-right: 44px;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+/* ==========================================
+   ARROW
+========================================== */
+
+.duration-arrow {
+    position: absolute;
+    right: 16px;
+
+    color: #a9a3c8;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   OPTIONS
+========================================== */
+
+.duration-select option {
+    background: #181427;
+    color: #ffffff;
+}

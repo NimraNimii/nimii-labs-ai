@@ -191,9 +191,8 @@ useEffect(() => {
 
   const [platform, setPlatform] =
     useState("TikTok");
-
+const [duration, setDuration] = useState("45-60 seconds");
    
-
 
   const quickTopics = [
     "AI Agents",
@@ -397,13 +396,13 @@ const idToken = await user.getIdToken();
   Authorization: `Bearer ${idToken}`,
 },
 
-          body: JSON.stringify({
-            niche,
-       duration: platform,
-            trends: "",
-            dnaType: dnaMode?.primary.toUpperCase(),
-            platform,
-          }),
+         body: JSON.stringify({
+  niche,
+  duration,
+  trends: "",
+  dnaType: dnaMode?.primary.toUpperCase(),
+  platform,
+})
         }
       );
 
@@ -670,11 +669,6 @@ console.dir({
     },
 }, { depth: null });
 
-
-
-
-
-
 updateScores(result.scores);
 
     if (result.analysis) {
@@ -768,6 +762,9 @@ scores={scores}
 
         platform={platform}
         setPlatform={setPlatform}
+
+ duration={duration}
+  setDuration={setDuration}
 
         dnaMode={dnaMode}
         setDnaMode={setDnaMode}

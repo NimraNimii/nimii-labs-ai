@@ -241,37 +241,130 @@ const raw = await generateQwen(prompt);
 let rewriteReason = "";
 
 if (rewriteType === "improve_hook") {
-    const rewrittenHook = String(raw)
-        .trim()
-        .replace(/^["']|["']$/g, "");
 
-    if (!rewrittenHook) {
-        throw new Error(
-            "Hook rewrite model returned an empty response."
-        );
+ let rewrittenHook = "";
+let parsedHook = null;
+
+const rawText = String(raw).trim();
+
+// Qwen should return structured JSON:
+// {
+//   "target": "hook",
+//   "rewritten": "...",
+//   "reason": "..."
+// }
+//
+// First try the normal JSON parser.
+try {
+    const candidate = parseJson(rawText);
+
+    if (
+        candidate &&
+        typeof candidate === "object" &&
+        !Array.isArray(candidate) &&
+        typeof candidate.rewritten === "string" &&
+        candidate.rewritten.trim()
+    ) {
+        parsedHook = candidate;
+        rewrittenHook = candidate.rewritten.trim();
     }
+
+} catch (error) {
+
+    console.error(
+        "Hook JSON parsing failed. Attempting safe extraction."
+    );
+
+    console.error(
+        "Parse error:",
+        error?.message
+    );
+}
+
+// --------------------------------------------------
+// SAFE FALLBACK FOR MALFORMED JSON
+// --------------------------------------------------
+//
+// Never use the complete raw JSON response as the hook.
+// If Qwen returned a JSON-like response that could not
+// be parsed normally, extract only the "rewritten" value.
+
+if (!rewrittenHook) {
+
+    const rewrittenMatch = rawText.match(
+        /"rewritten"\s*:\s*"((?:\\.|[^"\\])*)"/s
+    );
+
+    if (rewrittenMatch?.[1]) {
+
+        try {
+
+            rewrittenHook = JSON.parse(
+                `"${rewrittenMatch[1]}"`
+            ).trim();
+
+        } catch {
+
+            rewrittenHook = rewrittenMatch[1]
+                .replace(/\\"/g, '"')
+                .replace(/\\n/g, " ")
+                .replace(/\\r/g, "")
+                .replace(/\\t/g, " ")
+                .trim();
+        }
+    }
+}
+
+// --------------------------------------------------
+// PLAIN TEXT FALLBACK
+// --------------------------------------------------
+//
+// Only treat the response as plain text if it does
+// NOT look like a JSON object.
+
+if (!rewrittenHook) {
+
+    const looksLikeJson =
+        rawText.startsWith("{") &&
+        rawText.endsWith("}");
+
+    if (!looksLikeJson) {
+        rewrittenHook = rawText
+            .replace(/^["']|["']$/g, "")
+            .trim();
+    }
+}
+
+if (!rewrittenHook) {
+
+    throw new Error(
+        "Hook rewrite model returned an invalid response."
+    );
+}
 
     rewritten = {
         title: script.title || "",
         hook: rewrittenHook,
         script: script.script || "",
         cta: script.cta || "",
-    hashtags: Array.isArray(script.hashtags)
-    ? script.hashtags
-    : [],
+        hashtags: Array.isArray(script.hashtags)
+            ? script.hashtags
+            : [],
     };
 
-    rewriteReason = {
-        summary:
-            "Improved the hook for stronger curiosity and immediate attention.",
-        improvements: [
-            "Stronger opening",
-            "Higher curiosity",
-            "More natural creator-style wording",
-        ],
-    };
-
-} else {
+    rewriteReason =
+        parsedHook?.reason || {
+            summary:
+                "Improved the hook for stronger curiosity and immediate attention.",
+            improvements: [
+                "Stronger opening",
+                "Higher curiosity",
+                "More natural creator-style wording",
+            ],
+        };
+}
+    
+else {
     let parsed;
 
     try {

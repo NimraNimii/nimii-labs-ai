@@ -11,7 +11,10 @@ import HowItWorks from "../components/HowItWorks";
 import Settings from "../pages/Settings";
 import ResetPassword from "../pages/ResetPassword";
 import ProtectedRoute from "../assets/ProtectedRoute";
-
+import Terms from "../pages/Terms";
+import Privacy from "../pages/Privacy";
+import Refund from "../pages/Refund";
+import Support from "../pages/Support";
 
 export default function AppRoutes() {
   return (
@@ -21,7 +24,12 @@ export default function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/pricing" element={<Pricing />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/refund" element={<Refund />} />
+       <Route path="/support" element={<Support />} />
       <Route path="/trending" element={<Trending />} />
+     
     
   <Route
   path="/dashboard"

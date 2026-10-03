@@ -393,23 +393,20 @@ CTA: Save this before it disappears.`,
           {/* LEFT */}
           <div className="hero-left">
 
-            <div className="hero-badge">
-              <span>⚡</span>
-              <p>  AI Viral Score for Short-Form Content </p>
-            </div>
+           <div className="hero-badge">
+  <span>⚡</span>
+  <p>AI Content Analysis for Short-Form Content</p>
+</div>
 
-            <h1 className="hero-title">
-              Know if your video
-              <br />
-              will land —
-              <br />
-              <span>before you post.</span>
-            </h1>
+<h1 className="hero-title">
+  Know What to Improve
+  <br />
+  Before You Record.
+</h1>
 
-            <p className="hero-subtitle">
-              Paste your idea. Get a Viral Score in seconds.
-              Know if it's worth filming before you hit record.
-            </p>
+<p className="hero-subtitle">
+  Analyze your content idea, identify weak points, and improve your script before you publish.
+</p>
 
 
             <div className="hero-cta-row">
@@ -427,7 +424,7 @@ CTA: Save this before it disappears.`,
                   }
                 }}
               >
-                Get My Viral Score →
+                Analyze My Idea →
               </button>
             </div>
 
@@ -545,25 +542,23 @@ CTA: Save this before it disappears.`,
                    
                   </div>
 
-                  <h4 className="score-title">
-                    Your Viral Score
-                  </h4>
+                 <h4 className="score-title">
+  Your Content Score
+</h4>
 
-                  {/* ring */}
-                  <div className="score-ring-wrap">
-                    <div className="score-ring">
-                      <div className="score-inner">
-                        <h2>91</h2>
-                        <span>/100</span>
-                      </div>
-                    </div>
+{/* ring */}
+<div className="score-ring-wrap">
+  <div className="score-ring">
+    <div className="score-inner">
+      <h2>91</h2>
+      <span>/100</span>
+    </div>
+  </div>
+</div>
 
-
-                  </div>
-
-                  <p className="viral-text">
-                    Great viral potential 🔥
-                  </p>
+<p className="viral-text">
+  Strong content signals
+</p>
 
                   {/* metrics */}
                   <div className="phone-metrics">

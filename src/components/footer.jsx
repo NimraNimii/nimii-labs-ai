@@ -25,11 +25,10 @@ export default function Footer() {
           Know before you record.
         </h2>
 
-        <p>
-          Validate ideas in seconds and stop wasting
-          hours on content that won't perform.
-        </p>
-
+       <p>
+  Analyze your idea, identify weak points, and improve
+  your script before you publish.
+</p>
         <Link
           to="/signup"
           className="footer-cta-button"
@@ -42,7 +41,7 @@ export default function Footer() {
 </p>
 
 <p className="footer-platforms">
-  Built for TikTok • Reels • Shorts
+  Built for short-form content workflows
 </p>
 
       </div>
@@ -78,27 +77,10 @@ export default function Footer() {
 Nimii helps you know before you record.
           </p>
 
-          <div className="footer-stat-row">
-
-            <div className="footer-stat">
-              <strong>12s</strong>
-              <span>Validation</span>
-            </div>
-
-            <div className="footer-stat">
-              <strong>91%</strong>
-              <span>Confidence</span>
-            </div>
-
-            <div className="footer-stat">
-              <strong>724h</strong>
-              <span>Saved / Year</span>
-            </div>
-
-          </div>
-
-Trusted by creators building short-form content daily.
-
+        <p className="footer-description">
+  AI-assisted content analysis and script
+  improvement for short-form creators.
+</p>
 
         </div>
 
@@ -115,31 +97,31 @@ Trusted by creators building short-form content daily.
         </div>
 
         {/* COMPANY */}
-        <div className="footer-links">
-          <h4>Company</h4>
-
-          <Link to="/privacy">Privacy</Link>
-          <Link to="/terms">Terms</Link>
-        </div>
+       <div className="footer-links">
+  <h4>Company</h4>
+  <Link to="/privacy">Privacy</Link>
+  <Link to="/terms">Terms</Link>
+  <Link to="/refund">Refund & Cancellation</Link>
+  <Link to="/support">Support</Link>
+</div>
 
         {/* CREATORS */}
-        <div className="footer-links">
-          <h4>Creators</h4>
-
-          <a href="/">Follow on TikTok →</a>
-          <a href="/">Follow on Instagram →</a>
-          <a href="/">Follow on YouTube →</a>
-        </div>
+       <div className="footer-links">
+  <h4>Resources</h4>
+  <Link to="/how-it-works">How It Works</Link>
+  <Link to="/pricing">Pricing</Link>
+  <Link to="/support">Support</Link>
+  <a href="mailto:nimiiwritess@gmail.com">Contact Us</a>
+</div>
 
       </div>
 
       {/* BOTTOM */}
       <div className="footer-bottom">
 
-        <p>
-          Optimized for TikTok • Reels • Shorts
-        </p>
-
+       <p className="footer-bottom-platforms">
+  Built for short-form content workflows
+</p>
         <p>
           © 2026 Nimii Labs. All rights reserved.
         </p>

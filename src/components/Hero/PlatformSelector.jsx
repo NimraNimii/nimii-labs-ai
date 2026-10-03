@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import { Music2, ChevronDown } from "lucide-react";
 
 import "../../styles/PlatformSelector.css";
 
 const platforms = [
-  "TikTok (60s)",
-  "Instagram Reels",
-  "YouTube Shorts",
-  "Facebook Reels",
+  {
+    label: "TikTok (60s)",
+    value: "TikTok",
+  },
+  {
+    label: "Instagram Reels",
+    value: "Instagram Reels",
+  },
+  {
+    label: "YouTube Shorts",
+    value: "YouTube Shorts",
+  },
+  {
+    label: "Facebook Reels",
+    value: "Facebook Reels",
+  },
 ];
 
-export default function PlatformSelector() {
-  const [platform, setPlatform] = useState(platforms[0]);
+export default function PlatformSelector({
+  platform = "TikTok",
+  setPlatform,
+}) {
+  const selectedPlatform =
+    platforms.find((item) => item.value === platform) || platforms[0];
 
   return (
     <div className="platform-selector">
@@ -23,12 +39,17 @@ export default function PlatformSelector() {
 
       <select
         className="platform-select"
-        value={platform}
-        onChange={(e) => setPlatform(e.target.value)}
+        value={selectedPlatform.value}
+        onChange={(e) => {
+          setPlatform(e.target.value);
+        }}
       >
         {platforms.map((item) => (
-          <option key={item}>
-            {item}
+          <option
+            key={item.value}
+            value={item.value}
+          >
+            {item.label}
           </option>
         ))}
       </select>

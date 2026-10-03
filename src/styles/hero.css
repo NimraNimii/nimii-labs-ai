@@ -118,16 +118,49 @@
    CONTROLS
 ===================================================== */
 
+/* =====================================================
+   CONTROLS
+===================================================== */
+
 .dashboard-hero-controls {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 
     margin-top: 22px;
     margin-bottom: 0;
-    position: static;
 
     width: 100%;
+    min-width: 0;
+}
+
+/* Platform */
+.dashboard-hero-controls .platform-selector {
+    flex: 0 0 145px;
+    width: 145px;
+    min-width: 0;
+}
+
+/* Duration */
+.dashboard-hero-controls .duration-selector {
+    flex: 0 0 160px;
+    width: 160px;
+    min-width: 0;
+}
+
+/* DNA */
+.dashboard-hero-controls .dna-selector {
+    flex: 0 0 145px;
+    width: 145px;
+    min-width: 0;
+}
+
+/* Generate button */
+.dashboard-hero-controls .dashboard-generate-button {
+    flex: 1 1 auto;
+    min-width: 220px;
+    max-width: none;
+    margin-left: 0;
 }
 
 .dashboard-platform-selector{

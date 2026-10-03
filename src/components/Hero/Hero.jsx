@@ -9,6 +9,7 @@ import DNAMode from "./DNAMode";
 import GenerateButton from "./GenerateButton";
 import QuickTopics from "./QuickTopics";
 import HeaderStats from "../Header/HeaderStats";
+import DurationSelector from "./DurationSelector";
 
 function Hero({
   hook,
@@ -23,6 +24,9 @@ scores,
 
   platform,
   setPlatform,
+
+   duration,
+  setDuration,
 
   dnaMode,
   setDnaMode,
@@ -71,6 +75,11 @@ scores,
                   platform={platform}
                   setPlatform={setPlatform}
                 />
+
+<DurationSelector
+  duration={duration}
+  setDuration={setDuration}
+/>
 
                 <DNAMode
                   dnaMode={dnaMode}

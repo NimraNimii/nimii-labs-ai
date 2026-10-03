@@ -1,9 +1,60 @@
-import Footer from "../components/footer";
+
 import "../styles/pricing.css";
 import { useNavigate } from "react-router-dom";
+import { getPaddle } from "../utils/paddle";
+import { auth } from "../firebase";
+
+
+const PADDLE_MONTHLY_PRICE_ID =
+  "pri_01m31gc50nkmdjv8rwk3eeyqcw";
+
+const PADDLE_ANNUAL_PRICE_ID =
+  "pri_01m31gn4a8rr7nt66eq3eqf3j1";
 
 export default function Pricing() {
   const navigate = useNavigate();
+
+  const openPaddleCheckout = async (priceId) => {
+  try {
+    const paddle = await getPaddle();
+
+    if (!paddle) {
+      alert("Payment system is temporarily unavailable.");
+      return;
+    }
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please log in before subscribing.");
+      return;
+    }
+
+    await paddle.Checkout.open({
+      settings: {
+        displayMode: "overlay",
+        theme: "dark",
+        variant: "one-page",
+        locale: "en",
+      },
+
+      items: [
+        {
+          priceId,
+          quantity: 1,
+        },
+      ],
+
+      customData: {
+        firebaseUid: user.uid,
+      },
+    });
+  } catch (error) {
+    console.error("Paddle checkout error:", error);
+    alert("Unable to open checkout. Please try again.");
+  }
+};
+
 
   return (
     <>
@@ -18,11 +69,11 @@ export default function Pricing() {
             💎 SIMPLE PRICING
           </span>
 
-          <h2>
-            Start Free.
-            <br />
-            Upgrade Only When Content Starts Winning.
-          </h2>
+        <h2>
+  Start Free.
+  <br />
+  Upgrade When You Need More.
+</h2>
 
           <p>
             Validate your ideas before you spend hours recording.
@@ -30,7 +81,7 @@ export default function Pricing() {
         </div>
 
         <div className="pricing-benefits">
-          <span>✓ No credit card required</span>
+          <span>✓ 3-day free trial</span>
           <span>✓ Cancel anytime</span>
           <span>✓ Upgrade instantly</span>
         </div>
@@ -62,65 +113,86 @@ export default function Pricing() {
           </div>
 
 
-          {/* ===== CREATOR ===== */}
+          {/* ===== PRO MONTHLY ===== */}
 
           <div className="pricing-card popular-card magnetic-card">
-            <h3>Creator</h3>
+
+            <h3>Nimii Labs Pro</h3>
 
             <div className="price">
-              $12<span>/month</span>
+              $9<span>/month</span>
             </div>
+
+            <p className="trial-text">
+              3-day free trial
+            </p>
 
             <ul>
               <li>✓ Unlimited validations</li>
               <li>✓ Advanced hook analysis</li>
-              <li>✓ Viral scoring</li>
+            <li>✓ Content scoring</li>
               <li>✓ Script history</li>
               <li>✓ Faster generation</li>
             </ul>
 
             <button
               className="pricing-btn-primary"
-              onClick={() => navigate("/signup")}
+              onClick={() =>
+                openPaddleCheckout(PADDLE_MONTHLY_PRICE_ID)
+              }
             >
-              Start Creating
+              Start 3-Day Free Trial
             </button>
+
           </div>
 
 
-          {/* ===== GROWTH ===== */}
+          {/* ===== PRO ANNUAL ===== */}
 
           <div className="pricing-card glass-card">
+
             <div className="popular-badge">
-              MOST POPULAR
+              BEST VALUE
             </div>
 
-            <h3>Growth</h3>
+            <h3>Nimii Labs Pro Annual</h3>
 
             <div className="price">
-              $29<span>/month</span>
+              $90<span>/year</span>
             </div>
 
+            <p className="trial-text">
+              3-day free trial
+            </p>
+
+            <p className="annual-equivalent">
+              Equivalent to $7.50/month
+            </p>
+
             <ul>
-              <li>✓ Everything in Creator</li>
-              <li>✓ Brand voice</li>
-              <li>✓ Content variations</li>
-              <li>✓ Bulk generation</li>
-              <li>✓ PDF export</li>
+              <li>✓ Everything in Pro</li>
+              <li>✓ Unlimited validations</li>
+              <li>✓ Advanced hook analysis</li>
+              <li>✓ Script history</li>
+              <li>✓ Faster generation</li>
             </ul>
 
             <button
               className="pricing-btn-primary"
-              onClick={() => navigate("/signup")}
+              onClick={() =>
+                openPaddleCheckout(PADDLE_ANNUAL_PRICE_ID)
+              }
             >
-              Upgrade To Growth
+              Start Annual Trial
             </button>
+
           </div>
 
 
           {/* ===== ENTERPRISE ===== */}
 
           <div className="pricing-card enterprise-card">
+
             <h3>Enterprise</h3>
 
             <div className="price">
@@ -145,12 +217,11 @@ export default function Pricing() {
             >
               Contact Sales
             </button>
+
           </div>
 
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

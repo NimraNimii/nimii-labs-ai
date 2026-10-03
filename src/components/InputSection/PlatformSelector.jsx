@@ -1,9 +1,13 @@
 import React from "react";
+import { Music2, ChevronDown } from "lucide-react";
+
+import "../../styles/PlatformSelector.css";
 
 const platforms = [
-  "TikTok 15s",
-  "TikTok 60s",
-  "Shorts 60s",
+  "TikTok",
+  "Instagram Reels",
+  "YouTube Shorts",
+  "Facebook Reels",
 ];
 
 export default function PlatformSelector({
@@ -12,17 +16,32 @@ export default function PlatformSelector({
 }) {
   return (
     <div className="platform-selector">
-      {platforms.map((item) => (
-        <button
-          key={item}
-          className={`platform-btn ${
-            platform === item ? "active" : ""
-          }`}
-          onClick={() => setPlatform(item)}
-        >
-          {item}
-        </button>
-      ))}
+
+      <Music2
+        size={18}
+        className="platform-icon"
+      />
+
+      <select
+        className="platform-select"
+        value={platform}
+        onChange={(e) => setPlatform(e.target.value)}
+      >
+        {platforms.map((item) => (
+          <option
+            key={item}
+            value={item}
+          >
+            {item}
+          </option>
+        ))}
+      </select>
+
+      <ChevronDown
+        size={18}
+        className="platform-arrow"
+      />
+
     </div>
   );
 }

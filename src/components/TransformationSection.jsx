@@ -16,15 +16,15 @@ export default function TransformationSection() {
             WHAT NIMII ACTUALLY DOES
           </span>
 
-          <h2>
-            See Why Your Content Will Win
-            <span> Before You Publish. </span>
-          </h2>
+         <h2>
+  See What Makes Your Content Stronger
+  <span> Before You Publish. </span>
+</h2>
 
-          <p className="section-subtitle">
-            Nimii finds what's holding your idea back, strengthens the weak
-            points, and shows you exactly why the new version performs better.
-          </p>
+         <p className="section-subtitle">
+  Nimii finds what's holding your idea back, strengthens the weak
+  points, and shows you where the new version can be improved.
+</p>
 
         </div>
 
@@ -55,8 +55,8 @@ export default function TransformationSection() {
             </div>
 
             <span className="potential-label">
-              VIRAL POTENTIAL
-            </span>
+  CONTENT SCORE
+</span>
 
             <div className="hook-box">
 
@@ -125,8 +125,8 @@ export default function TransformationSection() {
             </div>
 
             <span className="potential-label">
-              VIRAL POTENTIAL
-            </span>
+  CONTENT SCORE
+</span>
 
             <div className="hook-box">
 
@@ -144,7 +144,7 @@ export default function TransformationSection() {
 
             <div className="issues-list success-list">
 
-              <p>Why it works better:</p>
+              <p>Why it's stronger:</p>
 
               <ul>
                 <li>
@@ -195,9 +195,9 @@ export default function TransformationSection() {
                   NIMII'S AI VERDICT
                 </span>
 
-                <h3>
-                  Performance Analysis
-                </h3>
+               <h3>
+  Content Analysis
+</h3>
               </div>
 
               <div className="verdict-score">
@@ -216,7 +216,7 @@ export default function TransformationSection() {
 
                 <div className="score-ring-inner">
                   <strong>91</strong>
-                  <span>VIRAL SCORE</span>
+                  <span>CONTENT SCORE</span>
                 </div>
 
               </div>
@@ -227,15 +227,14 @@ export default function TransformationSection() {
                   VERY STRONG
                 </span>
 
-                <h4>
-                  Great viral potential
-                </h4>
-
-                <p>
-                  Strong hook and curiosity give this idea
-                  a much better chance of holding attention.
-                </p>
-
+               <h4>
+  Strong content signals
+</h4>
+<p>
+  Strong hook and curiosity provide useful signals
+  for improving the content structure.
+</p>
+               
               </div>
 
             </div>
