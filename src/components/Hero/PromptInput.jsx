@@ -23,26 +23,30 @@ export default function PromptInput({
    
 <div className="prompt-placeholder">
 
-    <h2 className="placeholder-title">
-        Describe your viral video idea...
-    </h2>
+    <h2>
+  Describe your content idea...
+</h2>
 
     <h4 className="examples-title">Examples:</h4>
 
-    <ul className="example-list">
+  <ul className="example-list">
 
-    <li className="example-item">
+  <li className="example-item">
     <span>✦</span>
-    <span>AI tools that save 10 hours a week</span>
-</li>
+    <span>3 AI tools that can help freelancers save hours every week</span>
+  </li>
 
-      <li className="example-item">
+  <li className="example-item">
     <span>✦</span>
-    <span>How I made $1000 with YouTube Shorts</span>
-</li>
+    <span>Why do most creators struggle to stay consistent?</span>
+  </li>
 
+  <li className="example-item">
+    <span>✦</span>
+    <span>How to start a side hustle with $100</span>
+  </li>
 
-    </ul>
+</ul>
 
 </div>
 

@@ -119,21 +119,24 @@ export async function retryAI(
 
             lastError = error;
 
-            console.error("\n==============================");
-            console.error(
-                `AI Attempt: ${attempt + 1} / ${retries + 1}`
-            );
-            console.error("Error:", error?.message);
-            console.error("==============================\n");
+            console.error("AI request failed:", {
+                name: error?.name,
+                status: error?.status,
+                code: error?.code,
+                attempt: attempt + 1,
+                maxAttempts: retries + 1,
+            });
 
-            // IMPORTANT:
-            // Don't waste retries on errors that cannot be
-            // fixed by repeating the exact same request.
+            /*
+            =================================================
+            Non-Retryable Errors
+            =================================================
+
+            Do not repeat requests that are unlikely
+            to succeed by sending the exact same request.
+            */
+
             if (isNonRetryableError(error)) {
-
-                console.error(
-                    "❌ Non-retryable AI error. Stopping retries."
-                );
 
                 throw error;
             }
@@ -147,12 +150,12 @@ export async function retryAI(
                 : delay;
 
             console.log(
-                `⏳ Retrying AI request in ${waitTime}ms...`
+                `AI retry scheduled in ${waitTime}ms`
             );
 
             await sleep(waitTime);
         }
-    }
 
+        }
     throw lastError;
 }

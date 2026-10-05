@@ -7,8 +7,8 @@ import {
 import "../../styles/Header.css";
 
 export default function Header({
-  title = "Validate Your Next Viral Idea",
-  subtitle = "Predict performance, discover weak spots, and generate a stronger version before you hit record..",
+  title = "Validate Your Next Content Idea",
+subtitle = "Describe your idea, discover weak spots, and improve your script before you hit record.",
 }) {
   return (
     <header className="dashboard-header">
@@ -34,7 +34,7 @@ export default function Header({
           </span>
 
           <h3>
-            Ready to create something viral?
+            Ready to create something great?
           </h3>
 
         </div>

@@ -38,116 +38,86 @@ Planner Stage
 */
 
 export async function runPlannerStage({
+  creativePlan,
+}) {
+  try {
+    /*
+    ==========================================
+    STEP 3
 
-    creativePlan
+    Build Planner Prompt
+    ==========================================
+    */
 
-})
-
-{
-
-    try {
-
-
-        /*
-        ==========================================
-        STEP 3
-
-        Build Planner Prompt
-        ==========================================
-        */
-
-        const prompt =
-            buildPlannerPrompt(
-                creativePlan
-            );
-
-            console.log("\n========== CREATIVE PLAN ==========");
-console.log(JSON.stringify(creativePlan,));
-console.log("===================================\n");
-
-
-        /*
-        ==========================================
-        STEP 4
-
-        Call Planner AI
-
-        (Injected later)
-
-        ==========================================
-        */
-
-   const rawResponse =
-    await plannerEngine(prompt);
-
-        /*
-        ==========================================
-        STEP 5
-
-        Parse Planner JSON
-        ==========================================
-        */
-
-        const blueprint =
-            parsePlannerResponse(
-                rawResponse
-            );
-
-            console.log("\n========== BLUEPRINT ==========");
-console.log(JSON.stringify(blueprint, null, 2));
-console.log("================================\n");
-
-
-        /*
-        ==========================================
-        STEP 6
-
-        Validate Planner Output
-        ==========================================
-        */
-
-   const plannerValidation =
-    validatePlannerOutput(
-        blueprint
+    const prompt = buildPlannerPrompt(
+      creativePlan
     );
 
-        /*
-        ==========================================
-        STEP 7
+    /*
+    ==========================================
+    STEP 4
 
-        Update Runtime
-        ==========================================
-        */
+    Call Planner AI
+    ==========================================
+    */
 
-        creativePlan.runtime.plannerExecuted = true;
+    const rawResponse = await plannerEngine(
+      prompt
+    );
 
-        /*
-        ==========================================
-        Return
-        ==========================================
-        */
+    /*
+    ==========================================
+    STEP 5
 
-        return {
+    Parse Planner JSON
+    ==========================================
+    */
 
-    creativePlan,
+    const blueprint = parsePlannerResponse(
+      rawResponse
+    );
 
-    blueprint,
+    /*
+    ==========================================
+    STEP 6
 
-    plannerValidation
+    Validate Planner Output
+    ==========================================
+    */
 
-};
+    const plannerValidation =
+      validatePlannerOutput(
+        blueprint
+      );
 
-    }
+    /*
+    ==========================================
+    STEP 7
 
-    catch (error) {
+    Update Runtime
+    ==========================================
+    */
 
-        console.error(
-            "Planner Stage Error:",
-            error
-        );
+    creativePlan.runtime.plannerExecuted = true;
 
-        throw error;
+    /*
+    ==========================================
+    Return
+    ==========================================
+    */
 
-    }
+    return {
+      creativePlan,
+      blueprint,
+      plannerValidation,
+    };
+  } catch (error) {
+    console.error("Planner stage failed:", {
+      name: error?.name,
+      message: error?.message,
+      status: error?.status,
+    });
 
+    throw error;
+  }
 }

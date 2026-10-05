@@ -64,7 +64,7 @@ export default function HowItWorks() {
 
           <div className="step">
             <span>02</span>
-            <h3>Analyze Performance</h3>
+            <h3>Analyze Content</h3>
             <p>
               Nimii evaluates hook quality, retention and curiosity.
             </p>
@@ -72,10 +72,10 @@ export default function HowItWorks() {
 
           <div className="step">
             <span>03</span>
-            <h3>Get Viral Score</h3>
-            <p>
-              See performance predictions before filming.
-            </p>
+           <h3>Get Content Score</h3>
+<p>
+  See content signals and improvement areas before filming.
+</p>
           </div>
 
           <div className="step">

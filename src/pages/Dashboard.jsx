@@ -1,8 +1,15 @@
 import { db, auth } from "../firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Hero from "../components/Hero/Hero";
 import AnalysisLoader from "../components/Hero/AnalysisLoader";
@@ -27,6 +34,9 @@ const [script, setScript] = useState("");
 const [cta, setCta] = useState("");
 const [hashtags, setHashtags] = useState([]);
 
+const [totalScripts, setTotalScripts] = useState(0);
+const [averageScore, setAverageScore] = useState(0);
+const [plan, setPlan] = useState("Free");
 
 const [rewritePreview, setRewritePreview] = useState(null);
 
@@ -103,6 +113,58 @@ useEffect(() => {
 }, []);
   
 
+useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      setTotalScripts(0);
+      setAverageScore(0);
+      return;
+    }
+
+    try {
+      const scriptsQuery = query(
+        collection(db, "scripts"),
+        where("userId", "==", user.uid)
+      );
+
+      const snapshot = await getDocs(scriptsQuery);
+
+      const scripts = snapshot.docs.map((doc) => doc.data());
+
+      setTotalScripts(scripts.length);
+
+      const scores = scripts
+        .map((item) => {
+          return (
+            item.scores?.overall ??
+            item.scores?.viralScore ??
+            null
+          );
+        })
+        .filter(
+          (score) =>
+            typeof score === "number" &&
+            Number.isFinite(score)
+        );
+
+      if (scores.length > 0) {
+        const average =
+          scores.reduce((sum, score) => sum + score, 0) /
+          scores.length;
+
+        setAverageScore(Math.round(average));
+      } else {
+        setAverageScore(0);
+      }
+    } catch (error) {
+      console.error("Failed to load dashboard stats:", error);
+    }
+  });
+
+  return () => unsubscribe();
+}, []);
+
+
   const [topic, setTopic] = useState("");
   const [category, setCategory] = useState("unfiltered");
   const [niche, setNiche] = useState("");
@@ -133,7 +195,7 @@ const closeSidebar = () => {
     const powerWords = [
       "ai",
       "money",
-      "viral",
+    "engaging",
       "automation",
       "business",
       "secret",
@@ -341,7 +403,7 @@ setAnalysisStep("✨ Analyzing Hook...");
     try {
     setGenerating(true);
 
-setAnalysisStage("Finding viral pattern...");
+setAnalysisStage("Analyzing content structure...");
 
 // Clear previous generation
 setTitle("");
@@ -360,7 +422,7 @@ setViralScore(0);
 setAnalysisStep("Understanding your topic");
 await wait(700);
 
-setAnalysisStep("Finding viral patterns");
+setAnalysisStep("Analyzing content patterns");
 await wait(700);
 
 setAnalysisStep("Building hook strategy");
@@ -372,7 +434,7 @@ await wait(700);
 setAnalysisStep("Comparing AI writers");
 await wait(700);
 
-setAnalysisStep("Calculating viral score");
+setAnalysisStep("Calculating content score");
 await wait(700);
 
 setAnalysisStep("Preparing rewrite suggestions");
@@ -756,6 +818,10 @@ const applyRewrite = (selected) => {
     analysis={analysis}
 
 scores={scores}
+
+  totalScripts={totalScripts}
+  averageScore={averageScore}
+  plan={plan}
 
         niche={niche}
         setNiche={setNiche}

@@ -2,27 +2,29 @@ import React from "react";
 import "../../styles/Header.css";
 import QuickTopics from "../Hero/QuickTopics";
 
-
 export default function HeaderActions({
   score = 82,
-  reach = "50K - 250K",
 }) {
   const radius = 78;
   const circumference = 2 * Math.PI * radius;
-  const progress = circumference - (score / 100) * circumference;
+  const progress =
+    circumference - (score / 100) * circumference;
 
   return (
     <div className="viral-score-card">
 
       <div className="viral-score-header">
         <span className="live-dot"></span>
-        <span>Viral Score (Live)</span>
+        <span>Content Score (Live)</span>
       </div>
 
       <div className="viral-gauge">
 
-        <svg width="210" height="120" viewBox="0 0 210 120">
-
+        <svg
+          width="210"
+          height="120"
+          viewBox="0 0 210 120"
+        >
           <path
             d="M30 105 A75 75 0 0 1 180 105"
             fill="none"
@@ -43,11 +45,16 @@ export default function HeaderActions({
 
           <defs>
             <linearGradient id="gradient">
-              <stop offset="0%" stopColor="#c38cff"/>
-              <stop offset="100%" stopColor="#8a3ffc"/>
+              <stop
+                offset="0%"
+                stopColor="#c38cff"
+              />
+              <stop
+                offset="100%"
+                stopColor="#8a3ffc"
+              />
             </linearGradient>
           </defs>
-
         </svg>
 
         <div className="score-center">
@@ -58,29 +65,17 @@ export default function HeaderActions({
       </div>
 
       <div className="viral-status">
-        📈 High Viral Potential
+        Strong Content Signals
       </div>
 
       <div className="reach-card">
+        <small>Score Breakdown</small>
 
-        <small>Est. Reach</small>
+        <h3>{score}/100</h3>
 
-        <h3>{reach}</h3>
-
-        <span>views</span>
-
+        <span>content score</span>
       </div>
 
-<div className="header-actions">
-
-    <div className="viral-score-card">
-        ...
     </div>
-
-
-</div>
-
-    </div>
-
   );
 }

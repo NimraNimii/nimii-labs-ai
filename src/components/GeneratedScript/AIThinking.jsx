@@ -20,11 +20,11 @@ const steps = [
   },
   {
     id: 2,
-    title: "Finding viral competitors",
+    title: "Finding relevant content patterns",
   },
   {
     id: 3,
-    title: "Predicting Viral Score",
+    title: "Evaluating Content Score",
   },
   {
     id: 4,
@@ -89,7 +89,7 @@ export default function AIThinking({
         <div>
 
         <h2 className="thinking-title">
-  Building your next viral script
+  Building your next content draft
 </h2>
 
 <p className="thinking-subtitle">

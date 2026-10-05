@@ -3,7 +3,7 @@ import "../../styles/HeaderStats.css";
 
 export default function HeaderStats({
   totalScripts = 2,
-  avgScore = 71,
+  averageScore = 0,
   plan = "Free",
 }) {
   return (
@@ -19,7 +19,7 @@ export default function HeaderStats({
 
         <div className="dashboard-stat-content">
 
-            <h3>2</h3>
+            <h3>{totalScripts}</h3>
 
             <span>Total Scripts</span>
 
@@ -35,9 +35,9 @@ export default function HeaderStats({
 
         <div className="dashboard-stat-content">
 
-            <h3>71</h3>
+    <h3>{averageScore}</h3>
 
-            <span>Avg Viral Score</span>
+            <span>Avg Content Score</span>
 
         </div>
 
@@ -51,7 +51,7 @@ export default function HeaderStats({
 
         <div className="dashboard-stat-content">
 
-            <h3>Free</h3>
+        <h3>{plan}</h3>
 
             <span>Current Plan</span>
 

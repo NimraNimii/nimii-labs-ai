@@ -1,6 +1,5 @@
-
-
 import { generatePipeline } from "../ai/generatePipeline.js";
+
 export const generateScript = async (req, res) => {
   try {
     const {
@@ -32,20 +31,16 @@ export const generateScript = async (req, res) => {
       success: true,
       data: result,
     });
+  } catch (error) {
+    console.error("Generate request failed:", {
+      name: error?.name,
+      message: error?.message,
+      status: error?.status,
+    });
 
-  } 
-
-
-
-  catch (error) {
-  console.error("========== GENERATE ERROR ==========");
-  console.error(error);
-  console.error(error.stack);
-
-  return res.status(500).json({
-    success: false,
-    error: error.message,
-  });
-}
-  
+    return res.status(500).json({
+      success: false,
+      error: "Unable to generate content right now. Please try again.",
+    });
+  }
 };

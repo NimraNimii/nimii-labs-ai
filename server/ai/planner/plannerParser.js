@@ -18,48 +18,98 @@ Removes:
 =========================================================
 */
 
-
-
 export function parsePlannerResponse(response) {
 
     if (!response) {
-        throw new Error("Planner returned an empty response.");
+        throw new Error(
+            "Planner returned an empty response."
+        );
     }
 
     let cleaned = response.trim();
 
-    // Remove markdown fences
+
+    /*
+    =====================================================
+    Remove Markdown Fences
+    =====================================================
+    */
+
     cleaned = cleaned
         .replace(/^```json\s*/i, "")
         .replace(/^```\s*/i, "")
         .replace(/\s*```$/i, "")
         .trim();
 
-    // Extract JSON object only
+
+    /*
+    =====================================================
+    Extract JSON Object
+    =====================================================
+    */
+
     const start = cleaned.indexOf("{");
     const end = cleaned.lastIndexOf("}");
 
-    if (start !== -1 && end !== -1 && end > start) {
-        cleaned = cleaned.slice(start, end + 1);
+    if (
+        start !== -1 &&
+        end !== -1 &&
+        end > start
+    ) {
+
+        cleaned = cleaned.slice(
+            start,
+            end + 1
+        );
+
     }
 
+
+    /*
+    =====================================================
+    Parse JSON
+    =====================================================
+    */
+
     try {
+
         return JSON.parse(cleaned);
+
     } catch (error) {
 
-        console.error("\n========== PLANNER RAW ==========\n");
-        console.error(cleaned);
+        /*
+        Never log the complete AI response.
+        It may contain user-generated content.
+        */
 
-        console.error("\n========== JSON ERROR ==========\n");
-        console.error(error.message);
+        console.error(
+            "Planner JSON parsing failed:",
+            {
+                name: error?.name,
+                message: error?.message,
+            }
+        );
 
-        // Helpful error if generation was cut off
+
+        /*
+        =================================================
+        Truncated Response
+        =================================================
+        */
+
         if (!cleaned.trim().endsWith("}")) {
+
             throw new Error(
                 "Planner response appears to be truncated before the JSON was completed."
             );
+
         }
 
-        throw error;
+
+        throw new Error(
+            "Planner returned invalid JSON."
+        );
+
     }
+
 }

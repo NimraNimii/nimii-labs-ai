@@ -132,7 +132,7 @@ export default function Trending() {
             </p>
 
             <p>
-              Viral Score:{" "}
+              Content Score:{" "}
               <strong>{item.score}</strong>
             </p>
 
@@ -159,10 +159,10 @@ export default function Trending() {
         ))}
       </div>
 
-      {/* VIRAL HOOKS */}
+      {/* Strong HOOKS */}
 
       <h2 style={{ marginBottom: "20px" }}>
-        🪝 Viral Hooks
+        🪝 Strong Hooks
       </h2>
 
       <div
@@ -418,7 +418,7 @@ export default function Trending() {
             fontSize: "16px",
           }}
         >
-          🚀 Generate Viral Script
+          🚀 Generate Script
         </button>
       </div>
     </div>

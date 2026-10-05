@@ -17,7 +17,7 @@ Start Validating.
     </h2>
 
     <p>
-     Predict hook strength, retention and viral potential before you record.
+    Evaluate hook strength, retention and content quality before you record.
     </p>
   </div>
 
@@ -34,7 +34,7 @@ Start Validating.
   </div>
 
   <div className="hero-metric-label">
-    Average Viral Score
+    Average Content Score
   </div>
 
 </div>

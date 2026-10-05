@@ -2,11 +2,11 @@ import "../../styles/AnalysisLoader.css";
 
 const STEPS = [
     "Understanding your topic",
-    "Finding viral patterns",
+    "Finding content patterns",
     "Building hook strategy",
     "Generating script",
     "Comparing AI writers",
-    "Calculating viral score",
+    "Calculating content score",
     "Preparing rewrite suggestions",
 ];
 
@@ -17,7 +17,7 @@ const PREVIEW = {
         cta: "Waiting..."
     },
 
-    "Finding viral patterns": {
+    "Finding content patterns": {
         hook: "Studying successful videos...",
         script: "Waiting for generation...",
         cta: "Waiting..."
@@ -41,7 +41,7 @@ const PREVIEW = {
         cta: "Waiting..."
     },
 
-    "Calculating viral score": {
+    "Calculating content score": {
         hook: "✓ Complete",
         script: "✓ Script Complete",
         cta: "Generating CTA..."
@@ -84,7 +84,7 @@ export default function AnalysisLoader({ analysisStep }) {
                     <div>
 
                         <h2>
-                            AI is Building Your Viral Script
+                            AI is Building Your Content Draft
                         </h2>
 
                         <p>

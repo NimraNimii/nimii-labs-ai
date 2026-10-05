@@ -1,109 +1,110 @@
 /*
 =========================================================
-
 NIMII LABS
 
 Planner Schema
 
 Purpose:
-Defines the required structure of every
-Creative Blueprint produced by the Planner.
+Defines the exact Creative Blueprint contract
+returned by the Planner.
 
-This file contains NO AI.
-
+The Planner plans execution only.
+It does NOT write dialogue.
 =========================================================
 */
 
 export const plannerSchema = {
+  audienceInsight: "",
 
-    audienceInsight: "",
+  coreMessage: "",
 
-    coreMessage: "",
+  creativeDirection: {
+    objective: "",
+    primaryAngle: "",
+    keyConflict: "",
+    desiredTakeaway: "",
+  },
 
-    beliefToChange: "",
+  narrative: {
+    type: "",
+    storySource: "",
+    pointOfView: "",
+    speakerRole: "",
+    allowInventedDetails: false,
+  },
 
-    creativeDirection: "",
+  openingPlan: {
+    purpose: "",
+    style: "",
+    emotion: "",
+  },
 
-    openingStrategy: "",
+  hookPlan: {
+    type: "",
+    goal: "",
+    topic: "",
+    emotion: "",
+    curiosityGap: "",
+    primaryTrigger: "",
+    openingPattern: "",
+    maxWords: 12,
+    mustCreateImmediateCuriosity: true,
+    mustAvoidGenericOpenings: true,
+    avoid: [],
+  },
 
-    hookExecution: "",
-
-    storyFlow: [
-
-        {
-
-            step: 1,
-
-            title: "",
-
-            purpose: "",
-
-            emotion: ""
-
-        }
-
+  storyPlan: {
+    structure: [
+      "Hook",
+      "Problem",
+      "Insight",
+      "Example",
+      "Lesson",
+      "CTA",
     ],
+    pace: "fast",
+    transitionStyle: "natural",
+  },
 
-    patternInterrupts: [
+  patternInterrupts: [
+    {
+      position: "",
+      purpose: "",
+    },
+  ],
 
-        {
+  emotionJourney: [""],
 
-            position: "",
+  ctaPlan: {
+    goal: "",
+    style: "",
+    tone: "",
+    conversionAction: "",
+    urgencyLevel: "",
+    reward: "",
+    allowIntentChange: true,
+  },
 
-            trigger: "",
-
-            purpose: ""
-
-        }
-
-    ],
-
-    emotionJourney: [
-
-        ""
-
-    ],
-
-    ctaExecution: "",
-
-    writerInstructions: [
-
-        ""
-
-    ]
-
+  writerConstraints: {
+    tone: "",
+    readingLevel: "",
+    sentenceLength: "",
+    avoid: [],
+    mustInclude: [],
+    mustNotInclude: [],
+  },
 };
 
-/*
-=========================================================
-Required Keys
-
-Used by plannerValidator.js
-=========================================================
-*/
-
 export const requiredPlannerFields = [
-
-    "audienceInsight",
-
-    "coreMessage",
-
-    "beliefToChange",
-
-    "creativeDirection",
-
-    "openingStrategy",
-
-    "hookExecution",
-
-    "storyFlow",
-
-    "patternInterrupts",
-
-    "emotionJourney",
-
-    "ctaExecution",
-
-    "writerInstructions"
-
+  "audienceInsight",
+  "coreMessage",
+  "creativeDirection",
+  "narrative",
+  "openingPlan",
+  "hookPlan",
+  "storyPlan",
+  "patternInterrupts",
+  "emotionJourney",
+  "ctaPlan",
+  "writerConstraints",
 ];

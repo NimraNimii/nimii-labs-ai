@@ -43,7 +43,7 @@ export default function GeneratedScript({
             <FileText size={30} strokeWidth={1.8} />
           </div>
 
-          <h3>Your viral script will appear here</h3>
+          <h3>Your generated script will appear here</h3>
 
           <p>
             Describe your idea, choose a platform and content
