@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 export default function Trending() {
   const navigate = useNavigate();
 
-  const trendingTopics = [
-    { topic: "AI Agents", growth: "+320%", score: 97 },
-    { topic: "Faceless YouTube", growth: "+280%", score: 95 },
-    { topic: "Side Hustles", growth: "+240%", score: 92 },
-    { topic: "Automation", growth: "+220%", score: 90 },
-    { topic: "Productivity", growth: "+210%", score: 89 },
-    { topic: "AI Business", growth: "+205%", score: 88 },
-  ];
+const trendingTopics = [
+  { topic: "AI Agents", growth: "Rising Interest", score: 97 },
+  { topic: "Faceless YouTube", growth: "Rising Interest", score: 95 },
+  { topic: "Side Hustles", growth: "Rising Interest", score: 92 },
+  { topic: "Automation", growth: "Rising Interest", score: 90 },
+  { topic: "Productivity", growth: "Rising Interest", score: 89 },
+  { topic: "AI Business", growth: "Rising Interest", score: 88 },
+];
 
   const hooks = [
     "Nobody is talking about this...",
@@ -90,10 +90,10 @@ export default function Trending() {
             fontSize: "18px",
           }}
         >
-          Discover viral opportunities before everyone
-          else. Find trending topics, viral hooks and
-          content ideas ready to become your next
-          winning script.
+       Discover content opportunities before everyone
+else. Find trending topics, strong hooks and
+content ideas ready to become your next
+script.
         </p>
       </div>
 
@@ -391,7 +391,7 @@ export default function Trending() {
         }}
       >
         <h2>
-          Ready to create your next viral video?
+          Ready to create your next short-form video?
         </h2>
 
         <p
@@ -400,8 +400,8 @@ export default function Trending() {
             marginBottom: "20px",
           }}
         >
-          Turn trending ideas into high-performing
-          scripts in seconds.
+          Turn trending ideas into structured
+scripts in seconds.
         </p>
 
         <button

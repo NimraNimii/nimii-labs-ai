@@ -84,9 +84,9 @@ export default function GeneratedScript({
     )} min read
   </span>
 
-  <span className="meta-pill success">
-    ✨ AI Optimized
-  </span>
+ <span className="meta-pill success">
+  ✨ AI Assisted
+</span>
 
 </div>
 

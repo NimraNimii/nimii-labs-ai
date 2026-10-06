@@ -214,36 +214,42 @@ specificPhrases.forEach(phrase => {
     =====================================
     */
 
-    const engagementWords = [
+ /*
+=====================================
+Discussion Quality
+=====================================
+*/
 
-        "agree",
+const discussionWords = [
 
-        "disagree",
+    "agree",
 
-        "what do you think",
+    "disagree",
 
-        "your opinion",
+    "what do you think",
 
-        "challenge",
+    "your opinion",
 
-        "which one",
+    "challenge",
 
-        "would you",
+    "which one",
 
-        "yes or no",
+    "would you",
 
-        "prove",
+    "yes or no",
 
-        "debate"
+    "prove",
 
-    ];
+    "debate"
 
-    engagementWords.forEach(word => {
+];
 
-        if (cta.includes(word))
-            score += 5;
+discussionWords.forEach(word => {
 
-    });
+    if (cta.includes(word))
+        score += 5;
+
+});
 
     /*
     =====================================

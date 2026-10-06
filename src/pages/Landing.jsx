@@ -82,11 +82,11 @@ export default function Landing() {
     return () => unsubscribe();
   }, []);
 
-  const rotatingWords = [
-    "Trending",
-    "Growing",
-    "Winning"
-  ];
+const rotatingWords = [
+  "Clearer",
+  "Stronger",
+  "Better"
+];
 
 
   const [currentWord, setCurrentWord] = useState(0);
@@ -118,7 +118,7 @@ export default function Landing() {
 
 PROBLEM: Most creators fail because they ignore psychology.
 
-VALUE: Here are 3 viral techniques that instantly improve retention.
+VALUE: Here are 3 practical techniques that can improve your content structure.
 
 CTA: Follow for more creator psychology.`,
 
@@ -162,7 +162,7 @@ CTA: Save this before it disappears.`,
     useState("TikTok 60s");
   const [cta, setCta] = useState("");
   const [thinkingText, setThinkingText] = useState(
-    "Analyzing viral patterns..."
+    "Analyzing content patterns..."
   );
 
   const [niche, setNiche] = useState("");
@@ -197,8 +197,8 @@ CTA: Save this before it disappears.`,
     "Why coffee beats sleep ☕⚡",
     "How gyms manipulate motivation 💪",
     "Why Gen Z hates meetings",
-    "What should we make viral?",
-    "The psychology behind viral hooks 🔥",
+    "What content idea should we explore?",
+    "The psychology behind strong hooks 🔥",
   ];
 
   const [placeholderIndex, setPlaceholderIndex] =
@@ -244,7 +244,7 @@ CTA: Save this before it disappears.`,
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "viral-script.txt";
+    link.download = "nimii-script.txt";
 
     document.body.appendChild(link);
     link.click();
@@ -451,7 +451,7 @@ CTA: Save this before it disappears.`,
 
 
             <div className="hero-platforms">
-              <span className="works-label"> Optimized for </span>
+            <span className="works-label"> Built for </span>
 
             <div className="platform-item tiktok">
     <FaTiktok />
@@ -488,8 +488,9 @@ CTA: Save this before it disappears.`,
             <span>⚡</span>
 
             <div>
-                <p>Score Ready</p>
-                <strong>12 sec ⚡</strong>
+                
+                <p>Analysis Ready</p>
+<strong>Content Check ⚡</strong>
             </div>
         </div>
 

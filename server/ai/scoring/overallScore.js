@@ -128,8 +128,8 @@ export function overallScore(
     else if (viralScore >= 80)
         rating = "Very Strong";
 
-    else if (viralScore >= 70)
-        rating = "Good Potential";
+   else if (viralScore >= 70)
+    rating = "Strong Content Signals";
 
     else if (viralScore >= 60)
         rating = "Needs Improvement";

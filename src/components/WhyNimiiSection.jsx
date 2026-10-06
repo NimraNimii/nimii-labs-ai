@@ -16,18 +16,19 @@ export default function WhyNimiiSection() {
             Most AI tools generate scripts.
           </h2>
 
-          <h3>
-            Nimii tells you if they're worth filming.
-          </h3>
+         <h3>
+  Nimii helps you improve them before filming.
+</h3>
 
-         <p>
+   <p>
 Creators don't need another writer.
-They need to know if an idea is worth filming
-before they spend hours recording, editing and posting.
+They need useful feedback on an idea before they
+spend hours recording, editing and posting.
 </p>
 
 <p>
-Most creators discover a video won't work after it's already published.
+Creators can discover weaknesses in their content only after
+spending time recording and editing.
 </p>
 
 <p className="why-highlight">
@@ -63,9 +64,9 @@ Nimii helps you find out first.
                 <span>Post</span>
                 <span className="arrow">↓</span>
 
-                <span className="fail">
-                  Flops
-                </span>
+               <span className="fail">
+  Uncertain Outcome
+</span>
 
               </div>
 
@@ -99,9 +100,9 @@ Nimii helps you find out first.
                 <span>Film</span>
                 <span className="arrow">↓</span>
 
-                <span className="success-text">
-                  Post ✓
-                </span>
+               <span className="success-text">
+  Ready to Publish
+</span>
 
               </div>
 

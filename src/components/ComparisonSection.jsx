@@ -4,12 +4,12 @@ import NimiiLogo from "./NimiiLogo";
 
 
 export default function ComparisonSection() {
- const rows = [
-  ["Generic script output", "Viral score before posting"],
-  ["No performance prediction", "Hook strength analysis"],
-  ["No content scoring", "Retention prediction"],
-  ["No audience insights", "Curiosity gap detection"],
-  ["No creator context", "Built around creator psychology"],
+const rows = [
+  ["Generic script output", "Content quality analysis"],
+  ["Limited content analysis", "Hook strength analysis"],
+  ["No content scoring", "Content quality scoring"],
+  ["Limited audience context", "Audience insights"],
+  ["No creator context", "Built around creator context"],
 ];
 
   return (
@@ -20,14 +20,14 @@ export default function ComparisonSection() {
           ✨ THE DIFFERENCE
         </span>
 
-      <h2>
-Most AI generates content.
-<span>  Nimii tells you if it will work. </span>
+  <h2>
+  Most AI generates content.
+  <span> Nimii helps you improve it. </span>
 </h2>
 
-       <p>
-Generate your script anywhere. Know if it's worth filming
- before you spend hours recording and editing.
+     <p>
+  Generate your script anywhere. Identify weak points and
+  improve your content before you spend hours recording and editing.
 </p>
       </div>
 

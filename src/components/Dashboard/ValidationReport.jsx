@@ -5,7 +5,6 @@ export default function ValidationReport({
     overallScore = 0,
 }) {
 
-    console.log(scores);
 
   const items = [
     {
@@ -53,11 +52,7 @@ export default function ValidationReport({
         label: "Hashtags",
         score: scores.hashtags || 0,
     },
-    {
-        key: "confidence",
-        label: "AI Confidence",
-        score: scores.confidence || 0,
-    },
+    
 ];
 
     const getStatus = (score) => {
@@ -88,25 +83,24 @@ export default function ValidationReport({
 
                 <div>
 
-                 <h2>AI Validation Report</h2>
+                 <h2>AI Content Analysis</h2>
 
 <p className="validation-subtitle">
-    Overall Score Breakdown
+    Content Quality Breakdown
 </p>
 
-                    <p>
-                        Your idea has been analyzed before generating the
-                        optimized version.
-                    </p>
-
+                   <p>
+    Your idea has been analyzed to identify strengths and
+    areas that could be improved.
+</p>
                 </div>
 
                 <div className="validation-overall">
 
-  <span>Overall Score</span>
+<span>Content Quality Score</span>
 
 <p className="validation-score-note">
-   Weighted across 9 content performance metrics.
+   Based on 9 content quality dimensions.
 </p>
 
     <h1>{overallScore}</h1>

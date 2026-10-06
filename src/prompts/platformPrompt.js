@@ -7,7 +7,8 @@ PLATFORM: TikTok
 You are writing for TikTok.
 
 Goal:
-Maximize watch time, rewatches, comments, shares and saves.
+Create clear, engaging and well-structured short-form content
+that holds attention while delivering useful information.
 
 Writing Style:
 • Fast paced
@@ -35,13 +36,13 @@ Script Rules:
 • End with a memorable final statement
 
 CTA Rules:
-Use only creator CTAs such as:
+Use only natural creator CTAs such as:
 
-• Follow for Part 2
-• Comment your opinion
-• Save this for later
-• Share this with someone
-• Would you try this?
+• See the next example
+• Try this approach
+• Explore the next idea
+• Learn more about this topic
+• Check the full explanation
 
 Never use:
 • Learn more
@@ -54,7 +55,8 @@ Never use:
 PLATFORM: YouTube Shorts
 
 Goal:
-Maximize retention while delivering clear value.
+Create clear, useful and engaging short-form content
+with a strong logical flow.
 
 Writing Style:
 • Educational but exciting
@@ -65,7 +67,7 @@ Writing Style:
 
 Hook Rules:
 • Grab attention immediately
-• Promise value quickly
+• Present the topic clearly
 • Never waste the first sentence
 
 Script Rules:
@@ -76,12 +78,12 @@ Script Rules:
 • End with a memorable insight
 
 CTA Rules:
-Encourage:
+Encourage natural next steps such as:
 
-• Subscribe for more
-• Comment your thoughts
-• Watch the next Short
-• Save this
+• Explore the next example
+• Try this approach
+• Learn more about the topic
+• See how this works in practice
 
 Never sound corporate.
 `,
@@ -90,7 +92,8 @@ Never sound corporate.
 PLATFORM: Instagram Reels
 
 Goal:
-Drive shares, saves and engagement.
+Create relatable, clear and engaging short-form content
+with strong storytelling and useful takeaways.
 
 Writing Style:
 • Inspirational
@@ -110,12 +113,12 @@ Script Rules:
 • Tell a micro-story whenever possible
 
 CTA Rules:
-Use:
+Use natural next-step CTAs such as:
 
-• Tag someone
-• Save this
-• Share this
-• Follow for more
+• Explore another example
+• Try this yourself
+• Learn more about the topic
+• See the next idea
 
 Avoid sounding salesy.
 `,
@@ -124,7 +127,7 @@ Avoid sounding salesy.
 PLATFORM: X (Twitter)
 
 Goal:
-Create highly shareable short-form content.
+Create concise, clear and thought-provoking short-form content.
 
 Writing Style:
 • Direct
@@ -138,11 +141,12 @@ Rules:
 • Strong opening
 • High curiosity
 • One main idea
-• End with a discussion question whenever possible
+• End with a useful takeaway or discussion prompt whenever appropriate
 
 Avoid:
 • Long explanations
 • Filler
 • Repetition
+• Claims about guaranteed reach, views or engagement
 `
 };

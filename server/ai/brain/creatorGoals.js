@@ -1,30 +1,13 @@
-/*
-=========================================================
-NIMII LABS
-Creative Brain v1
-Creator Goals Library
-=========================================================
-
-Purpose:
-Defines WHY the creator is making the content.
-
-This file contains NO prompts and NO AI logic.
-It only stores structured creative knowledge that
-other engines can use.
-
-=========================================================
-*/
-
 export const CREATOR_GOALS = {
 
     COMMENTS: {
 
         id: "comments",
 
-        name: "Increase Comments",
+        name: "Start Meaningful Discussions",
 
         description:
-            "Encourage discussion, opinions, and debate.",
+            "Encourage thoughtful discussion, opinions, and useful perspectives.",
 
         successMetric:
             "Meaningful conversations",
@@ -64,13 +47,13 @@ export const CREATOR_GOALS = {
 
         id: "followers",
 
-        name: "Gain Followers",
+        name: "Build Audience Connection",
 
         description:
-            "Build long-term audience trust and encourage follows.",
+            "Build long-term audience trust through useful and consistent content.",
 
         successMetric:
-            "New Followers",
+            "Audience Trust",
 
         preferredEmotions: [
             "Curiosity",
@@ -91,8 +74,8 @@ export const CREATOR_GOALS = {
         ],
 
         preferredCTA: [
-            "Follow_For_Part2",
-            "Follow_For_More"
+            "Explore_Next_Idea",
+            "Learn_More"
         ],
 
         avoidCTA: [
@@ -109,7 +92,7 @@ export const CREATOR_GOALS = {
         name: "Build Authority",
 
         description:
-            "Position the creator as an expert.",
+            "Position the creator as a knowledgeable and trustworthy source.",
 
         successMetric:
             "Audience Trust",
@@ -132,8 +115,8 @@ export const CREATOR_GOALS = {
         ],
 
         preferredCTA: [
-            "Save",
-            "Share"
+            "Learn_More",
+            "Try_This"
         ],
 
         avoidCTA: [
@@ -146,13 +129,13 @@ export const CREATOR_GOALS = {
 
         id: "shares",
 
-        name: "Increase Shares",
+        name: "Create Useful Takeaways",
 
         description:
-            "Create content people naturally send to others.",
+            "Create useful, relatable content that provides practical value.",
 
         successMetric:
-            "Shares",
+            "Practical Value",
 
         preferredEmotions: [
             "Surprise",
@@ -173,8 +156,8 @@ export const CREATOR_GOALS = {
         ],
 
         preferredCTA: [
-            "Share_With_A_Friend",
-            "Send_This"
+            "Try_This",
+            "Explore_The_Topic"
         ],
 
         avoidCTA: [
@@ -187,13 +170,13 @@ export const CREATOR_GOALS = {
 
         id: "sales",
 
-        name: "Increase Sales",
+        name: "Support Conversions",
 
         description:
-            "Convert viewers into customers.",
+            "Explain the value of a product or service and guide interested audiences toward an appropriate next step.",
 
         successMetric:
-            "Conversions",
+            "Relevant Actions",
 
         preferredEmotions: [
             "Desire",
@@ -229,10 +212,10 @@ export const CREATOR_GOALS = {
 
         id: "entertainment",
 
-        name: "Entertainment",
+        name: "Create Enjoyable Content",
 
         description:
-            "Maximize enjoyment and retention.",
+            "Create entertaining, enjoyable, and well-paced content.",
 
         successMetric:
             "Viewer Enjoyment",
@@ -256,8 +239,8 @@ export const CREATOR_GOALS = {
         ],
 
         preferredCTA: [
-            "Share",
-            "Follow"
+            "Explore_Next_Idea",
+            "Try_This"
         ],
 
         avoidCTA: [
@@ -267,43 +250,3 @@ export const CREATOR_GOALS = {
     }
 
 };
-
-/*
-=========================================================
-Helpers
-=========================================================
-*/
-
-export function getCreatorGoal(goal) {
-
-    if (!goal) {
-
-        return CREATOR_GOALS.FOLLOWERS;
-
-    }
-
-    return (
-        Object.values(CREATOR_GOALS).find(
-            item =>
-                item.id.toLowerCase() ===
-                goal.toLowerCase()
-        ) || CREATOR_GOALS.FOLLOWERS
-    );
-
-}
-
-export function getAllCreatorGoals() {
-
-    return Object.values(CREATOR_GOALS);
-
-}
-
-export function creatorGoalExists(goal) {
-
-    return Object.values(CREATOR_GOALS).some(
-        item =>
-            item.id.toLowerCase() ===
-            goal.toLowerCase()
-    );
-
-}

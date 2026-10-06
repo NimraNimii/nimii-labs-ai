@@ -42,19 +42,19 @@ Start Validating.
 
     <div className="secondary-metrics">
 
-      <div className="metric-box">
-        <div className="metric-value">12s</div>
-        <div className="metric-label">
-         ✓ Idea Validation
-        </div>
-      </div>
+    <div className="metric-box">
+  <div className="metric-value">12s</div>
+  <div className="metric-label">
+   ✓ Content Analysis
+  </div>
+</div>
 
-      <div className="metric-box">
-        <div className="metric-value">38%</div>
-        <div className="metric-label">
-         ✓ Predicted Retention
-        </div>
-      </div>
+  <div className="metric-box">
+ <div className="metric-value">AI</div>
+<div className="metric-label">
+  ✓ Retention Structure
+</div>
+</div>
 
       <div className="metric-box">
         <div className="metric-value">2x</div>

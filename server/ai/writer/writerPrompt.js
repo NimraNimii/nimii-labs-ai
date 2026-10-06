@@ -74,9 +74,9 @@ Writing Preference:
 ${writer === "qwen" ? `
 Writing Preference:
 
-• Maximize curiosity.
-• Create stronger contrast.
-• Use punchier sentence openings.
+Prioritize curiosity.
+Create stronger contrast.
+Use punchier sentence openings.
 ` : ""}
 
 
@@ -398,7 +398,7 @@ Every sentence should move the story forward.
 
 Maintain strong pacing.
 
-Every 2–3 sentences should naturally renew attention.
+Keep the pacing clear and varied throughout the script.
 
 Introduce:
 
@@ -449,7 +449,7 @@ Prioritize one primary trigger:
 • unexpected outcome
 • strong benefit
 
-The first sentence should make the viewer feel they must keep watching.
+The first sentence should make the topic immediately clear and compelling.
 
 Avoid generic openings such as:
 
@@ -464,7 +464,7 @@ Avoid weak introductions.
 
 Avoid explaining too early.
 
-Delay the payoff.
+Develop the key insight naturally before the conclusion.
 
 Keep the hook under the Blueprint's maxWords limit.
 
@@ -489,13 +489,14 @@ Prefer specific actions over generic follows.
 
 Examples of strong CTA intent:
 
-• comment
-• save
-• share
-• try it
-• answer a question
-• download
-• follow for similar content
+Examples of useful CTA intent:
+
+• explore the next idea
+• try the approach
+• learn more
+• answer a relevant question
+• download a related resource
+• see another example
 
 Avoid defaulting to:
 
@@ -503,8 +504,8 @@ Avoid defaulting to:
 
 unless the Blueprint explicitly requires a multi-part series.
 
-Every CTA should give the viewer a clear reason
-to act immediately.
+Every CTA should give the viewer a clear and relevant
+next step.
 
 
 ==================================================

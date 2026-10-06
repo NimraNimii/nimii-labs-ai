@@ -23,8 +23,6 @@ export default function RewriteStudio({
 
 {
  const [selected, setSelected] = useState("improve_hook");
-console.log("Selected:", selected);
-
   const [loading, setLoading] = useState(false);
 
   if (!analysis) return null;
@@ -134,7 +132,7 @@ const currentPreview =
 
         <div className="rewrite-score">
 
-          <span>Current Score</span>
+          <span>Current Content Score</span>
 
          <strong>{viralScore}</strong>
 
@@ -196,7 +194,7 @@ onClick={() => select(item.id)}
 {rewritePreview?.reason && (
   <div className="rewrite-reason">
 
-    <h4>✨ Why this is better</h4>
+    <h4>✨ Why this is stronger</h4>
 
     {typeof rewritePreview.reason === "string" ? (
       <p>{rewritePreview.reason}</p>

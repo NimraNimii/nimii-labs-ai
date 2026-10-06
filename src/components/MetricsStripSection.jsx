@@ -6,18 +6,18 @@ export default function MetricsStripSection() {
       value: "91",
       label: "Average Script Score",
     },
-    {
-      value: "12s",
-      label: "Average Generation Time",
-    },
-    {
-      value: "500+",
-      label: "Scripts Generated",
-    },
-    {
-      value: "38%",
-      label: "Average Retention Lift",
-    },
+   {
+  value: "AI",
+  label: "Assisted Content Generation",
+},
+   {
+  value: "AI",
+  label: "Script Generation",
+},
+   {
+  value: "9",
+  label: "Content Quality Dimensions",
+},
   ];
 
   return (

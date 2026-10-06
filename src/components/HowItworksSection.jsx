@@ -15,13 +15,10 @@ export default function HowItWorksSection() {
        <h2>
   Know Before <span>You Record.</span>
 </h2>
-
-        <p>
-          Stop guessing what might work. Nimii analyzes your idea,
-          predicts performance and generates a stronger version
-          before you ever hit record.
-        </p>
-
+<p>
+  Nimii analyzes your idea, identifies strengths and weak points,
+  and helps you create a stronger version before you ever hit record.
+</p>
       </div>
 
       <div className="landing-process">
@@ -57,10 +54,10 @@ or content concept.
 
             <h3>AI Analysis</h3>
 
-            <p>
-         We analyze hooks, retention,
-curiosity and engagement signals.
-            </p>
+           <p>
+  We analyze hooks, retention,
+  curiosity and content quality signals.
+</p>
 
           </div>
 
@@ -76,7 +73,7 @@ curiosity and engagement signals.
 
           <div className="process-content">
 
-            <h3>Get Your Score</h3>
+            <h3>Get Your Content Score</h3>
 
             <p>
         Know what's strong,
@@ -99,10 +96,10 @@ what's weak and what to improve.
 
             <h3>Generate Script</h3>
 
-            <p>
-             Get a stronger version
-designed to maximize performance.
-            </p>
+           <p>
+  Get a stronger version
+  designed to improve your content structure.
+</p>
 
           </div>
 

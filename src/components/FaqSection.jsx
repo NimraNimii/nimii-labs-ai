@@ -4,39 +4,39 @@ import Footer from "./footer";
 
 const faqs = [
   {
-    question: "How does Nimii know if an idea will work?",
-    answer:
-      "Nimii uses creator psychology, hook frameworks, and viral content patterns to generate creator-ready scripts in seconds."
+   question: "How does Nimii analyze an idea?",
+answer:
+  "Nimii analyzes your idea using content frameworks, hook structure, clarity, curiosity, and audience context to help you create a stronger script."
   },
   {
-    question: "Can beginners use Nimii?",
-    answer:
-      "No. Nimii is designed for beginners and experienced creators alike. Just enter your idea and get a structured script instantly."
-  },
+  question: "Can beginners use Nimii?",
+  answer:
+    "Yes. Nimii is designed for beginners and experienced creators alike. Just enter your idea and get a structured script."
+},
   {
     question: "Does Nimii work for TikTok, Reels and YouTube Shorts?",
     answer:
-      "Yes. Nimii is optimized for short-form platforms including TikTok, Instagram Reels, and YouTube Shorts."
+  "Yes. Nimii supports short-form content workflows for TikTok, Instagram Reels, and YouTube Shorts."
   },
-  {
-    question: "Can Nimii predict virality?",
-    answer:
-      "Nothing guarantees virality, but Nimii helps improve hooks, retention psychology, and content structure to maximize performance."
+  
+   {
+  question: "Can Nimii guarantee content performance?",
+  answer:
+    "No. Nimii does not guarantee views, likes, followers, reach, or other results. It analyzes content quality and helps identify areas that can be improved before you publish."
+
   },
   {
     question: "Is there a free plan?",
-    answer:
-      "Yes. You can upgrade, downgrade, or cancel your subscription whenever you want."
+   answer:
+  "Yes. Nimii offers a free plan, and Pro subscribers can upgrade, downgrade, or cancel their subscription."
   },
  
 {
-  question: "How accurate are the scores?",
-  answer: `No tool can guarantee views.
+  question: "What do Nimii's scores mean?",
+  answer: `Nimii's scores summarize different content-quality dimensions such as hook strength, retention structure, curiosity, clarity, CTA, platform fit, title, and hashtags.
 
-Nimii analyzes hooks, retention psychology,
-clarity, curiosity, and audience fit before
-you spend hours creating.`
-}
+They are analysis indicators, not guarantees of future views, reach, or engagement.`
+},
 
   
 ];
@@ -64,9 +64,8 @@ return (
         </h2>
 
         <p>
-          Everything about validation, scoring, scripts and getting better results.
-
-        </p>
+  Everything about content analysis, scoring, scripts, and improving your ideas.
+</p>
       </div>
 
       <div className="faq-container">

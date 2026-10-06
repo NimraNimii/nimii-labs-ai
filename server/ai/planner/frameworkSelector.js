@@ -124,13 +124,13 @@ export function selectFramework({
 
             break;
 
-        case "engagement":
+       case "entertainment":
 
-            framework = "Challenge";
+    framework = "Challenge";
 
-            confidence += 6;
+    confidence += 6;
 
-            break;
+    break;
 
         case "sales":
 

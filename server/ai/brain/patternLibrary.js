@@ -4,11 +4,11 @@ NIMII LABS
 
 Creative Brain v1
 
-Retention Strategy Library
+Content Structure Library
 
 Purpose:
-Determines where retention is likely to drop
-and injects the best pattern interrupt.
+Identifies points where content flow may weaken
+and selects an appropriate pattern interrupt.
 
 No AI.
 No prompts.
@@ -27,12 +27,12 @@ const RETENTION_PATTERNS = [
         description:
             "Ask a direct question that forces the viewer to think.",
 
+       
+
         preferredGoals: [
-
-            "comments",
-            "followers"
-
-        ],
+    "comments",
+    "authority"
+],
 
         preferredFrameworks: [
 
@@ -59,12 +59,10 @@ const RETENTION_PATTERNS = [
         description:
             "Introduce an unexpected contradiction.",
 
-        preferredGoals: [
-
-            "comments",
-            "shares"
-
-        ],
+      preferredGoals: [
+    "comments",
+    "authority"
+],
 
         preferredFrameworks: [
 
@@ -90,13 +88,10 @@ const RETENTION_PATTERNS = [
 
         description:
             "Reveal part of the answer while holding back the conclusion.",
-
-        preferredGoals: [
-
-            "followers",
-            "authority"
-
-        ],
+preferredGoals: [
+    "followers",
+    "authority"
+],
 
         preferredFrameworks: [
 
@@ -123,12 +118,10 @@ const RETENTION_PATTERNS = [
         description:
             "Insert a surprising fact to reset attention.",
 
-        preferredGoals: [
-
-            "authority",
-            "shares"
-
-        ],
+      preferredGoals: [
+    "authority",
+    "entertainment"
+],
 
         preferredFrameworks: [
 
@@ -154,12 +147,10 @@ const RETENTION_PATTERNS = [
         description:
             "Abruptly change pacing or direction to refresh attention.",
 
-        preferredGoals: [
-
-            "entertainment",
-            "shares"
-
-        ],
+      preferredGoals: [
+    "entertainment",
+    "authority"
+],
 
         preferredFrameworks: [
 

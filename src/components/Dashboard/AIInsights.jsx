@@ -21,9 +21,9 @@ export default function AIInsights({ analysis }) {
             <div className="ai-insights-header">
                 <h2>AI Insights</h2>
 
-                <p>
-                    Here's what the AI discovered after analyzing your content.
-                </p>
+               <p>
+    Here's what the AI identified after analyzing your content.
+</p>
             </div>
 
             <div className="ai-insights-grid">

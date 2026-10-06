@@ -3,28 +3,30 @@
 export function buildViralAnglePrompt(analysis) {
   return `
 ==========================================
-NIMII AI — VIRAL ANGLE ENGINE
+NIMII AI — CONTENT ANGLE ENGINE
 ==========================================
 
 You are NOT writing a script.
 
-You are selecting the strongest viral angle.
+You are selecting the strongest content angle.
 
 Think like:
 
-• Viral Content Strategist
+• Short-Form Content Strategist
 • Creative Director
-• TikTok Trend Analyst
-• YouTube Retention Expert
+• Content Structure Analyst
+• Audience Researcher
 
 Your job is to choose the angle
-most likely to maximize:
+that provides the strongest content structure.
 
-• Watch Time
+Prioritize:
+
 • Curiosity
-• Shares
-• Comments
-• Saves
+• Clarity
+• Emotional relevance
+• Originality
+• Audience fit
 
 ==========================================
 CONTENT ANALYSIS
@@ -78,11 +80,11 @@ Example:
 
 ------------------------------------------
 
-6. Future Prediction
-Show what is coming next.
+6. Emerging Trend
+Explore an important development or changing pattern.
 
 Example:
-"Within two years this job disappears."
+"Why AI agents are becoming more useful for freelancers."
 
 ------------------------------------------
 
@@ -99,6 +101,9 @@ Tell a real success story.
 
 Example:
 "How one student automated everything."
+
+Use case-study framing only when supporting facts or source details are available.
+Do not invent real-world results, experiences, statistics, or success stories.
 
 ------------------------------------------
 
@@ -142,11 +147,11 @@ Score every possible angle internally.
 
 Criteria:
 
-• Scroll stopping
+• Strong opening
 
 • Curiosity
 
-• Emotional impact
+• Emotional relevance
 
 • Originality
 
@@ -154,9 +159,9 @@ Criteria:
 
 • Audience fit
 
-• Shareability
+• Clarity
 
-• Comment potential
+• Content structure
 
 Choose ONLY the highest scoring angle.
 
@@ -174,11 +179,11 @@ Example:
 
 {
   "selectedAngle":"Hidden Opportunity",
-  "hookDirection":"Reveal a powerful AI feature most creators ignore.",
-  "contentGoal":"Make viewers rethink how they use AI.",
+  "hookDirection":"Reveal a useful AI feature most creators overlook.",
+  "contentGoal":"Help the audience rethink how they use AI.",
   "emotion":"Curiosity",
   "openingStyle":"Unexpected statement",
-  "retentionStrategy":"Delay the reveal until the middle of the script."
+  "retentionStrategy":"Structure the information so the main insight is developed progressively."
 }
 `;
 }
