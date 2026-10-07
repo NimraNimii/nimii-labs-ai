@@ -6,10 +6,10 @@ import { auth } from "../firebase";
 
 
 const PADDLE_MONTHLY_PRICE_ID =
-  "pri_01m31gc50nkmdjv8rwk3eeyqcw";
+  "pri_01m4ad7vwrayha0kwcnh8nxyqh";
 
 const PADDLE_ANNUAL_PRICE_ID =
-  "pri_01m31gn4a8rr7nt66eq3eqf3j1";
+  "pri_01m4adw8kbk4rpshck5tfvaak4";
 
 export default function Pricing() {
   const navigate = useNavigate();
