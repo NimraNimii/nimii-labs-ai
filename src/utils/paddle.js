@@ -11,7 +11,6 @@ export function getPaddle() {
   if (!paddlePromise) {
     paddlePromise = initializePaddle({
       token: import.meta.env.VITE_PADDLE_CLIENT_TOKEN,
-      environment: "sandbox",
     });
   }
 
